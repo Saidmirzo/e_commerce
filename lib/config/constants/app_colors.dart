@@ -8,6 +8,7 @@ abstract class AppColors {
   static const Color borderColor = Colors.white38;
   static const Color textColor1 = Color(0xff9391A8);
   static const Color filterBgColor = Color(0xff555962);
+  static const Color buttonColor = Color(0xffE9FF8F);
   static  Color borderColor2 = const Color(0xffFFF5F5).withOpacity(.31);
 
   static List<Color> cartGrColors = [

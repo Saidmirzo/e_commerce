@@ -41,11 +41,22 @@ class _Icons extends _AssetsHolder {
   String get star => "$basePath/star.svg";
 
   String get send => "$basePath/send.svg";
+
+  String get cricle => "$basePath/ciricle.svg";
+
+  String get shoppingBag => "$basePath/shopping_bag.svg";
  
 }
 
 class _Images extends _AssetsHolder {
   const _Images() : super('assets/images');
+
+  String get textBg => "$basePath/text_bg.jpg";
+
+  String get text200 => "$basePath/200.png";
+
+  String get person1 => "$basePath/person1.png";
+
  
 }
 
