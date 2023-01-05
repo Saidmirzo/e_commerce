@@ -18,13 +18,13 @@ class Routes {
         default:
           return MaterialPageRoute(
             settings: routeSettings,
-            builder: (_) => const MainPage(),
+            builder: (_) =>  MainPage(),
           );
       }
     } catch (e) {
       return MaterialPageRoute(
         settings: routeSettings,
-        builder: (_) => const MainPage(),
+        builder: (_) =>  MainPage(),
       );
     }
   }
