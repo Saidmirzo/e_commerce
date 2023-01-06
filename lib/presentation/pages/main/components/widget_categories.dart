@@ -6,6 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import '../../../components/categories_button_widget.dart';
+
 class Categories extends StatefulWidget {
   Categories({
     Key? key,
@@ -48,7 +50,6 @@ class _CategoriesState extends State<Categories> {
               3,
               (index) => CategoriesButton(
                 text: textButtons[index],
-                index: index,
                 isActive: activeIndex == index,
                 onTap: () {
                   setState(() {
@@ -64,46 +65,4 @@ class _CategoriesState extends State<Categories> {
   }
 }
 
-class CategoriesButton extends StatelessWidget {
-  const CategoriesButton({
-    Key? key,
-    required this.text,
-    required this.isActive,
-    required this.index,
-    required this.onTap,
-  }) : super(key: key);
-  final String text;
-  final bool isActive;
-  final int index;
-  final Function onTap;
 
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.only(right: 12.w),
-      child: TextButton(
-        onPressed: () {
-          onTap();
-        },
-        style: AppDecorations.buttonStyle(
-          borderRadius: 37.r,
-          bgColor: isActive ? AppColors.accentColor : Colors.transparent,
-          padding: EdgeInsets.symmetric(
-            horizontal: 28.w,
-            vertical: 11.h,
-          ),
-          border: BorderSide(
-            color: AppColors.baseLight.shade100.withOpacity(.3),
-          ),
-        ),
-        child: Text(
-          text,
-          style: AppTextStyles.body13w7.copyWith(
-              color: isActive
-                  ? AppColors.textColor1
-                  : AppColors.baseLight.shade100),
-        ),
-      ),
-    );
-  }
-}

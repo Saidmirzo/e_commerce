@@ -1,9 +1,13 @@
 import 'dart:ui';
-
 import 'package:e_commerce/config/constants/app_colors.dart';
 import 'package:e_commerce/config/constants/app_text_styles.dart';
+import 'package:e_commerce/presentation/components/custom_text_button.dart';
+import 'package:e_commerce/presentation/pages/main/components/widget_categories.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'categories_button_widget.dart';
+import 'details_shipping_widget.dart';
+import 'details_size_and_fit.dart';
 
 class DetailsBottomSheet extends StatefulWidget {
   const DetailsBottomSheet({super.key});
@@ -12,7 +16,8 @@ class DetailsBottomSheet extends StatefulWidget {
   State<DetailsBottomSheet> createState() => _DetailsBottomSheetState();
 }
 
-class _DetailsBottomSheetState extends State<DetailsBottomSheet> with SingleTickerProviderStateMixin {
+class _DetailsBottomSheetState extends State<DetailsBottomSheet>
+    with SingleTickerProviderStateMixin {
   late TabController tabController = TabController(length: 6, vsync: this);
 
   @override
@@ -49,7 +54,7 @@ class _DetailsBottomSheetState extends State<DetailsBottomSheet> with SingleTick
               ),
               MyTabbar(tabController: tabController),
               Flexible(
-                fit: FlexFit.loose,
+                fit: FlexFit.tight,
                 child: TabBarView(
                   controller: tabController,
                   children: [
@@ -62,7 +67,11 @@ class _DetailsBottomSheetState extends State<DetailsBottomSheet> with SingleTick
                         child: Row(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            ...["#boho gal", "#beach wibes", "#denim"].map((text) => Container(
+                            ...[
+                              "#boho gal",
+                              "#beach wibes",
+                              "#denim"
+                            ].map((text) => Container(
                                   width: 93.w,
                                   height: 30.h,
                                   margin: EdgeInsets.only(right: 4.5.w),
@@ -73,7 +82,8 @@ class _DetailsBottomSheetState extends State<DetailsBottomSheet> with SingleTick
                                   ),
                                   child: Text(
                                     text,
-                                    style: AppTextStyles.body12w5.copyWith(color: AppColors.baseLight.shade100),
+                                    style: AppTextStyles.body12w5.copyWith(
+                                        color: AppColors.baseLight.shade100),
                                   ),
                                 )),
                             Container(
@@ -82,7 +92,8 @@ class _DetailsBottomSheetState extends State<DetailsBottomSheet> with SingleTick
                               alignment: Alignment.center,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(6.r),
-                                border: Border.all(color: AppColors.borderColor2),
+                                border:
+                                    Border.all(color: AppColors.borderColor2),
                               ),
                               child: Text(
                                 '+5',
@@ -93,9 +104,11 @@ class _DetailsBottomSheetState extends State<DetailsBottomSheet> with SingleTick
                         ),
                       ),
                     ),
-                    Expanded(
-                      child: Container(),
-                    ),
+                    const DetailsShippingWidget(),
+                    Container(),
+                    const DetailsSizeAndFit(),
+                    Container(),
+                    Container(),
                   ],
                 ),
               ),
@@ -135,7 +148,8 @@ class MyTabbar extends StatelessWidget {
           isScrollable: true,
           controller: tabController,
           labelStyle: AppTextStyles.body15w7.copyWith(),
-          unselectedLabelStyle: AppTextStyles.body15w7.copyWith(color: AppColors.baseLight.shade40),
+          unselectedLabelStyle: AppTextStyles.body15w7
+              .copyWith(color: AppColors.baseLight.shade40),
           tabs: const [
             Tab(
               child: Text("Product details"),
