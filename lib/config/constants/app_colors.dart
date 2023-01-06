@@ -4,8 +4,10 @@ abstract class AppColors {
   const AppColors._();
 
   static const Color black = Color(0xFF000000);
+  static const Color grey = Color(0xFFAFAFAF);
   static const Color accentColor = Colors.white;
   static const Color borderColor = Colors.white38;
+  static const Color indicatorColor = Color(0xff5387FF);
   static const Color textColor1 = Color(0xff9391A8);
   static const Color filterBgColor = Color(0xff555962);
   static const Color buttonColor = Color(0xffE9FF8F);
@@ -101,6 +103,14 @@ class TextColor extends ColorSwatch<int> {
 
 class Gradients {
   const Gradients();
+
+  LinearGradient get detailsGradient => LinearGradient(
+        begin: Alignment.topRight,
+        colors: [
+          const Color(0xFF000000).withOpacity(.8),
+          const Color(0xFF1A1A1A).withOpacity(.614),
+        ],
+      );
 
   LinearGradient get welcome => LinearGradient(colors: [
         const Color(0xFF000000).withOpacity(0),

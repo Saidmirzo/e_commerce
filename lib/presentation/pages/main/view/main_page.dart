@@ -1,9 +1,4 @@
-import 'package:e_commerce/config/constants/app_colors.dart';
-import 'package:e_commerce/config/constants/assets.dart';
-import 'package:e_commerce/presentation/pages/main/components/video_player.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 import '../components/my_app_bar.dart';
 import '../components/video_content.dart';
