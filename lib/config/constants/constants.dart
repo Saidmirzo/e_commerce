@@ -22,3 +22,15 @@ List<Product> products = [
   Product(size: 'L', shoulder: 56.5, length: 42.3, sleeve: 50, bust: 99, cuff: 20),
   Product(size: 'XL', shoulder: 56.5, length: 42.3, sleeve: 50, bust: 99, cuff: 20),
 ];
+
+
+  Map<String, String> productDetails = {
+    "Color":
+        "The Silver Down Metallic Puffer Jacket is a composition of the exceptional quality parachute fabric. ",
+    "Type":
+        "The Silver Down Metallic Puffer Jacket is a composition of the exceptional quality parachute fabric. ",
+    "Neckline":
+        "The Silver Down Metallic Puffer Jacket is a composition of the exceptional quality parachute fabric. ",
+    "Features":
+        "The Silver Down Metallic Puffer Jacket is a composition of the exceptional quality parachute fabric. ",
+  };

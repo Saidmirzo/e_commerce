@@ -33,6 +33,7 @@ class ReviewsTab extends StatelessWidget {
           Flexible(
             fit: FlexFit.tight,
             child: ListView.builder(
+              physics: const BouncingScrollPhysics(),
               itemCount: 10,
               shrinkWrap: true,
               itemBuilder: (context, index) => const ReviewItem(),
