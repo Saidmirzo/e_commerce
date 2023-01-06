@@ -1,9 +1,12 @@
 import 'dart:ui';
 
 import 'package:e_commerce/config/constants/app_colors.dart';
-import 'package:e_commerce/config/constants/app_text_styles.dart';
+import 'package:e_commerce/presentation/components/product_details_tab.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import 'my_tabbar.dart';
+import 'reviews_tab.dart';
 
 class DetailsBottomSheet extends StatefulWidget {
   const DetailsBottomSheet({super.key});
@@ -13,7 +16,14 @@ class DetailsBottomSheet extends StatefulWidget {
 }
 
 class _DetailsBottomSheetState extends State<DetailsBottomSheet> with SingleTickerProviderStateMixin {
-  late TabController tabController = TabController(length: 6, vsync: this);
+  late TabController tabController = TabController(length: 5, vsync: this);
+
+  Map<String, String> productDetails = {
+    "Color": "The Silver Down Metallic Puffer Jacket is a composition of the exceptional quality parachute fabric. ",
+    "Type": "The Silver Down Metallic Puffer Jacket is a composition of the exceptional quality parachute fabric. ",
+    "Neckline": "The Silver Down Metallic Puffer Jacket is a composition of the exceptional quality parachute fabric. ",
+    "Features": "The Silver Down Metallic Puffer Jacket is a composition of the exceptional quality parachute fabric. ",
+  };
 
   @override
   Widget build(BuildContext context) {
@@ -49,53 +59,15 @@ class _DetailsBottomSheetState extends State<DetailsBottomSheet> with SingleTick
               ),
               MyTabbar(tabController: tabController),
               Flexible(
-                fit: FlexFit.loose,
+                fit: FlexFit.tight,
                 child: TabBarView(
                   controller: tabController,
                   children: [
-                    Container(
-                      height: 35.h,
-                      width: double.maxFinite,
-                      margin: EdgeInsets.symmetric(vertical: 35.h),
-                      child: SingleChildScrollView(
-                        scrollDirection: Axis.horizontal,
-                        child: Row(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            ...["#boho gal", "#beach wibes", "#denim"].map((text) => Container(
-                                  width: 93.w,
-                                  height: 30.h,
-                                  margin: EdgeInsets.only(right: 4.5.w),
-                                  alignment: Alignment.center,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(9.r),
-                                    color: AppColors.grey.withOpacity(.3),
-                                  ),
-                                  child: Text(
-                                    text,
-                                    style: AppTextStyles.body12w5.copyWith(color: AppColors.baseLight.shade100),
-                                  ),
-                                )),
-                            Container(
-                              height: 33.h,
-                              width: 33.h,
-                              alignment: Alignment.center,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(6.r),
-                                border: Border.all(color: AppColors.borderColor2),
-                              ),
-                              child: Text(
-                                '+5',
-                                style: AppTextStyles.body10w4,
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                    ),
-                    Expanded(
-                      child: Container(),
-                    ),
+                    ProductDetailsTab(productDetails: productDetails),
+                    Container(),
+                    Container(),
+                    Container(),
+                    const ReviewsTab(),
                   ],
                 ),
               ),
@@ -107,57 +79,6 @@ class _DetailsBottomSheetState extends State<DetailsBottomSheet> with SingleTick
   }
 }
 
-class MyTabbar extends StatelessWidget {
-  const MyTabbar({
-    Key? key,
-    this.tabController,
-    this.width,
-  }) : super(key: key);
 
-  final TabController? tabController;
-  final double? width;
 
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: width ?? double.infinity,
-      margin: EdgeInsets.only(bottom: 19.h),
-      decoration: BoxDecoration(
-        border: Border(
-          bottom: BorderSide(width: 2.h, color: AppColors.borderColor),
-        ),
-      ),
-      child: Transform.translate(
-        offset: Offset(0, 2.5.h),
-        child: TabBar(
-          indicatorColor: AppColors.indicatorColor,
-          indicatorWeight: 3.h,
-          isScrollable: true,
-          controller: tabController,
-          labelStyle: AppTextStyles.body15w7.copyWith(),
-          unselectedLabelStyle: AppTextStyles.body15w7.copyWith(color: AppColors.baseLight.shade40),
-          tabs: const [
-            Tab(
-              child: Text("Product details"),
-            ),
-            Tab(
-              child: Text("Shipping"),
-            ),
-            Tab(
-              child: Text("Return Policy"),
-            ),
-            Tab(
-              child: Text("Size & Fit"),
-            ),
-            Tab(
-              child: Text("Size & Fit"),
-            ),
-            Tab(
-              child: Text("Reviews"),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
+

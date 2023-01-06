@@ -57,6 +57,8 @@ class _Images extends _AssetsHolder {
 
   String get person1 => "$basePath/person1.png";
 
+  String get user => "$basePath/user.png";
+
  
 }
 
