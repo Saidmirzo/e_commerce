@@ -8,6 +8,8 @@ class MainPage extends StatelessWidget {
   List<String> urls = [
     'assets/videos/1.mp4',
     'assets/videos/2.mp4',
+    'assets/videos/3.mp4',
+    'assets/videos/4.mp4',
   ];
 
   @override
