@@ -1,6 +1,9 @@
 import 'dart:ui';
 import 'package:e_commerce/config/constants/app_colors.dart';
+import 'package:e_commerce/main.dart';
+import 'package:e_commerce/presentation/components/custom_divider.dart';
 import 'package:e_commerce/presentation/components/product_details_tab.dart';
+import 'package:e_commerce/presentation/pages/main/components/my_app_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../config/constants/constants.dart';
@@ -39,42 +42,24 @@ class _DetailsBottomSheetState extends State<DetailsBottomSheet>
             ),
             gradient: AppColors.gradients.detailsGradient,
           ),
-          child: Stack(
+          child: Column(
             children: [
-              BackdropFilter(
-                filter: ImageFilter.blur(sigmaX: 50, sigmaY: 50),
-                blendMode: BlendMode.dstIn,
+              const CustomDivider(),
+              MyTabbar(tabController: tabController),
+              Flexible(
+                fit: FlexFit.tight,
+                child: TabBarView(
+                  controller: tabController,
+                  children: [
+                    ProductDetailsTab(productDetails: productDetails),
+                    const DetailsShippingWidget(),
+                    Container(),
+                    const DetailsSizeAndFit(),
+                    const ReviewsTab(),
+                  ],
+                ),
               ),
-              Column(
-                children: [
-                  Align(
-                    alignment: Alignment.center,
-                    child: Container(
-                      width: 49.w,
-                      height: 3.h,
-                      margin: EdgeInsets.only(top: 20.h),
-                      decoration: BoxDecoration(
-                        color: Colors.white.withOpacity(.7),
-                        borderRadius: BorderRadius.circular(47.r),
-                      ),
-                    ),
-                  ),
-                  MyTabbar(tabController: tabController),
-                  Flexible(
-                    fit: FlexFit.tight,
-                    child: TabBarView(
-                      controller: tabController,
-                      children: [
-                        ProductDetailsTab(productDetails: productDetails),
-                        const DetailsShippingWidget(),
-                        Container(),
-                        const DetailsSizeAndFit(),
-                        const ReviewsTab(),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
+              const MyAppBar(),
             ],
           ),
         ),

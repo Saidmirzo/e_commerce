@@ -29,7 +29,7 @@ class BottomAbout extends StatelessWidget {
             end: Alignment.topCenter,
             stops: const [.2, 1],
             colors: [
-              AppColors.black.withOpacity(.9),
+              AppColors.black.withOpacity(.95),
               Colors.transparent,
             ],
           ),
@@ -194,8 +194,3 @@ class BottomAbout extends StatelessWidget {
     );
   }
 }
-
-
-
-
-

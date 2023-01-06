@@ -4,6 +4,7 @@ import 'package:e_commerce/presentation/pages/main/components/widget_opinions.da
 import 'package:flutter/material.dart';
 
 import 'bottom_about_widget.dart';
+
 class VideoContent extends StatelessWidget {
   const VideoContent({
     Key? key,
@@ -36,18 +37,10 @@ class VideoItem extends StatelessWidget {
     return Stack(
       children: [
         MyVideoPlayer(url: url),
-         Categories(),
         const BottomAbout(),
+        Categories(),
         const Opinions(),
       ],
     );
   }
 }
-
-
-
-
-
-
-
-

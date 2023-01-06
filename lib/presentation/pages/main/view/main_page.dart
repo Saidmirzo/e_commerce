@@ -16,7 +16,7 @@ class MainPage extends StatelessWidget {
       body: Stack(
         children: [
           VideoContent(urls: urls),
-          MyAppBar(),
+          const MyAppBar(),
         ],
       ),
     );
