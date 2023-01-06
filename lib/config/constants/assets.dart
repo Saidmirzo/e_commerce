@@ -45,6 +45,8 @@ class _Icons extends _AssetsHolder {
   String get cricle => "$basePath/ciricle.svg";
 
   String get shoppingBag => "$basePath/shopping_bag.svg";
+
+  String get shipping => "$basePath/ic_shipping.svg";
  
 }
 
