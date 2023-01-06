@@ -5,8 +5,6 @@ import 'package:e_commerce/config/constants/app_text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../pages/main/components/text_button_gradient.dart';
-
 class DetailsBottomSheet extends StatefulWidget {
   const DetailsBottomSheet({super.key});
 
@@ -55,25 +53,45 @@ class _DetailsBottomSheetState extends State<DetailsBottomSheet> with SingleTick
                 child: TabBarView(
                   controller: tabController,
                   children: [
-                    Row(
-                      children: [
-                        TextButtonGradient(text: '#boho gal', onTap: () {}),
-                        TextButtonGradient(text: '#beach wibes', onTap: () {}),
-                        TextButtonGradient(text: '#denim', onTap: () {}),
-                        Container(
-                          height: 25.h,
-                          width: 25.h,
-                          alignment: Alignment.center,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(6.r),
-                            border: Border.all(color: AppColors.borderColor2),
-                          ),
-                          child: Text(
-                            '+5',
-                            style: AppTextStyles.body10w4,
-                          ),
-                        )
-                      ],
+                    Container(
+                      height: 35.h,
+                      width: double.maxFinite,
+                      margin: EdgeInsets.symmetric(vertical: 35.h),
+                      child: SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            ...["#boho gal", "#beach wibes", "#denim"].map((text) => Container(
+                                  width: 93.w,
+                                  height: 30.h,
+                                  margin: EdgeInsets.only(right: 4.5.w),
+                                  alignment: Alignment.center,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(9.r),
+                                    color: AppColors.grey.withOpacity(.3),
+                                  ),
+                                  child: Text(
+                                    text,
+                                    style: AppTextStyles.body12w5.copyWith(color: AppColors.baseLight.shade100),
+                                  ),
+                                )),
+                            Container(
+                              height: 33.h,
+                              width: 33.h,
+                              alignment: Alignment.center,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(6.r),
+                                border: Border.all(color: AppColors.borderColor2),
+                              ),
+                              child: Text(
+                                '+5',
+                                style: AppTextStyles.body10w4,
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
                     ),
                     Expanded(
                       child: Container(),
