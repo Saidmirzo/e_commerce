@@ -1,3 +1,7 @@
+
+import 'dart:ui';
+
+import 'app_colors.dart';
 class Product {
   Product({
     required this.size,
@@ -23,9 +27,7 @@ List<Product> products = [
   Product(size: 'XL', shoulder: 56.5, length: 42.3, sleeve: 50, bust: 99, cuff: 20),
 ];
 
-import 'dart:ui';
 
-import 'app_colors.dart';
 
 List<String> textButtons = ['XS', 'S', 'M'];
   List<Color> colors = [
