@@ -6,6 +6,7 @@ import 'package:e_commerce/presentation/pages/main/components/text_button_gradie
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'add_to_cart_bottom_sheet.dart';
 
 class BottomAbout extends StatelessWidget {
   const BottomAbout({
@@ -145,29 +146,38 @@ class BottomAbout extends StatelessWidget {
                     ],
                   ),
                 ),
-                Container(
-                  height: 38.h,
-                  width: 170.w,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(9.r),
-                      color: AppColors.buttonColor,
-                      boxShadow: const [
-                        BoxShadow(
-                          blurRadius: 20,
-                          color: AppColors.buttonColor,
-                        )
-                      ]),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        'To cart',
-                        style: AppTextStyles.body14w7
-                            .copyWith(color: AppColors.black),
-                      ),
-                      SizedBox(width: 5.w),
-                      SvgPicture.asset(Assets.icons.shoppingBag),
-                    ],
+                InkWell(
+                  onTap: () {
+                    showBottomSheet(
+                      backgroundColor: Colors.transparent,
+                      context: context,
+                      builder: (context) => const AddToCartBottomSheet(),
+                    );
+                  },
+                  child: Container(
+                    height: 38.h,
+                    width: 170.w,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(9.r),
+                        color: AppColors.buttonColor,
+                        boxShadow: const [
+                          BoxShadow(
+                            blurRadius: 20,
+                            color: AppColors.buttonColor,
+                          )
+                        ]),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          'To cart',
+                          style: AppTextStyles.body14w7
+                              .copyWith(color: AppColors.black),
+                        ),
+                        SizedBox(width: 5.w),
+                        SvgPicture.asset(Assets.icons.shoppingBag),
+                      ],
+                    ),
                   ),
                 )
               ],
@@ -178,3 +188,8 @@ class BottomAbout extends StatelessWidget {
     );
   }
 }
+
+
+
+
+
