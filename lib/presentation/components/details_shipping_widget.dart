@@ -18,7 +18,10 @@ class DetailsShippingWidget extends StatelessWidget {
       padding: EdgeInsets.only(left: 40.w, right: 27.w),
       child: Column(
         children: [
-          CustomTextButton(text: 'Choose state',onTap: (){}),
+          Padding(
+            padding: EdgeInsets.only(top: 20.h, bottom: 26.h),
+            child: CustomTextButton(text: 'Choose state', onTap: () {}),
+          ),
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -38,8 +41,7 @@ class DetailsShippingWidget extends StatelessWidget {
                 child: Text(
                   r'Free express shipping on orders over US$129.00 Estimated to be delivered on 19/08/2022 - 26/08/2022.',
                   style: AppTextStyles.body13w4.copyWith(
-                    color:
-                        AppColors.accentColor.withOpacity(.5),
+                    color: AppColors.accentColor.withOpacity(.5),
                   ),
                 ),
               )
@@ -50,4 +52,3 @@ class DetailsShippingWidget extends StatelessWidget {
     );
   }
 }
-

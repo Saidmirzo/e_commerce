@@ -23,7 +23,8 @@ class ReviewItem extends StatelessWidget {
             SizedBox(width: 13.w),
             Text(
               "Black Dress",
-              style: AppTextStyles.body15w4.copyWith(color: AppColors.baseLight.shade100),
+              style: AppTextStyles.body15w4
+                  .copyWith(color: AppColors.baseLight.shade100),
             ),
             Container(
               height: 22.h,
@@ -51,7 +52,8 @@ class ReviewItem extends StatelessWidget {
               onPressed: () {},
               child: Text(
                 "See full review",
-                style: AppTextStyles.body15w6.copyWith(color: AppColors.indicatorColor),
+                style: AppTextStyles.body15w6
+                    .copyWith(color: AppColors.indicatorColor),
               ),
             ),
           ],
@@ -64,12 +66,14 @@ class ReviewItem extends StatelessWidget {
               width: 230.w,
               child: Text(
                 "The Silver Down Metallic Puffer Jacket is a composition of the exceptional quality parachute fabric...",
-                style: AppTextStyles.body13w4.copyWith(color: AppColors.baseLight.shade50),
+                style: AppTextStyles.body13w4
+                    .copyWith(color: AppColors.baseLight.shade50),
               ),
             ),
             SizedBox(
               width: 120.w,
               child: SingleChildScrollView(
+                physics: const BouncingScrollPhysics(),
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: List.generate(
