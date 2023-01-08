@@ -31,33 +31,36 @@ class TextButtonGradient extends StatelessWidget {
       onTap: () {
         onTap();
       },
-      child: ClipRRect(
-        borderRadius: BorderRadius.circular(borderRaius ?? 5.r),
-        child: BackdropFilter(
-          filter: ImageFilter.blur(sigmaX: 5, sigmaY: 5),
-          child: Container(
-            height: size != null ? size!.height : null,
-            width: size != null ? size!.width : null,
-            alignment: Alignment.center,
-            margin: EdgeInsets.only(right: 10.w),
-            padding: EdgeInsets.symmetric(
-              horizontal: 11.w,
-              vertical: 5.h,
-            ),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(borderRaius ?? 5.r),
-              gradient: LinearGradient(
-                colors: [
-                  AppColors.baseLight.shade100.withOpacity(.4),
-                  AppColors.baseLight.shade100.withOpacity(.1),
-                ],
+      child: Padding(
+        padding: EdgeInsets.only(right: 10.w),
+        child: ClipRRect(
+          
+          borderRadius: BorderRadius.circular(borderRaius ?? 5.r),
+          child: BackdropFilter(
+            filter: ImageFilter.blur(sigmaX: 5, sigmaY: 5),
+            child: Container(
+              height: size != null ? size!.height : null,
+              width: size != null ? size!.width : null,
+              alignment: Alignment.center,
+              padding: EdgeInsets.symmetric(
+                horizontal: 11.w,
+                vertical: 5.h,
               ),
-            ),
-            child: child ??
-                Text(
-                  text ?? '',
-                  style: AppTextStyles.body10w5,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(borderRaius ?? 5.r),
+                gradient: LinearGradient(
+                  colors: [
+                    AppColors.baseLight.shade100.withOpacity(.4),
+                    AppColors.baseLight.shade100.withOpacity(.1),
+                  ],
                 ),
+              ),
+              child: child ??
+                  Text(
+                    text ?? '',
+                    style: AppTextStyles.body10w5,
+                  ),
+            ),
           ),
         ),
       ),

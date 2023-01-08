@@ -8,7 +8,6 @@ abstract class Assets {
   static _Images get images => const _Images();
 
   // ignore: library_private_types_in_public_api
-  
 
   // ignore: library_private_types_in_public_api
   static _Videos get videos => const _Videos();
@@ -22,7 +21,6 @@ abstract class _AssetsHolder {
 
 class _Icons extends _AssetsHolder {
   const _Icons() : super('assets/icons');
-
 
   String get eye => "$basePath/eye.svg";
 
@@ -47,7 +45,6 @@ class _Icons extends _AssetsHolder {
   String get shoppingBag => "$basePath/shopping_bag.svg";
 
   String get shipping => "$basePath/ic_shipping.svg";
- 
 }
 
 class _Images extends _AssetsHolder {
@@ -61,9 +58,17 @@ class _Images extends _AssetsHolder {
 
   String get user => "$basePath/user.png";
 
- 
+  String get img1 => "$basePath/img1.jpg";
+
+  String get img2 => "$basePath/img2.jpg";
 }
 
 class _Videos extends _AssetsHolder {
   const _Videos() : super('assets/videos');
+
+  String get video1 => "$basePath/1.mp4";
+
+  String get video2 => "$basePath/2.mp4";
+
+  String get video3 => "$basePath/3.mp4";
 }

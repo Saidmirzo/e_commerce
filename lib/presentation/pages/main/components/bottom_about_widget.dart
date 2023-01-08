@@ -2,12 +2,12 @@ import 'dart:ui';
 import 'package:e_commerce/config/constants/app_colors.dart';
 import 'package:e_commerce/config/constants/app_text_styles.dart';
 import 'package:e_commerce/config/constants/assets.dart';
-import 'package:e_commerce/presentation/components/details_bottomsheet.dart';
+import 'package:e_commerce/presentation/pages/main/components/bottom_sheet_components/details_bottomsheet.dart';
 import 'package:e_commerce/presentation/pages/main/components/text_button_gradient.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'add_to_cart_bottom_sheet.dart';
+import 'bottom_sheet_components/add_to_cart_bottom_sheet.dart';
 
 class BottomAbout extends StatelessWidget {
   const BottomAbout({
