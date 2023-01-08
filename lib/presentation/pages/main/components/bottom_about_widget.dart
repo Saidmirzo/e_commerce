@@ -21,7 +21,7 @@ class BottomAbout extends StatelessWidget {
       right: 0,
       left: 0,
       child: Container(
-        height: 480.h,
+        height: 450.h,
         padding: EdgeInsets.only(bottom: 90.h, left: 20.w),
         decoration: BoxDecoration(
           gradient: LinearGradient(

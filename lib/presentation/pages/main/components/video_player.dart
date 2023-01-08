@@ -1,3 +1,5 @@
+import 'package:e_commerce/config/constants/app_colors.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:video_player/video_player.dart';
@@ -26,7 +28,13 @@ class _MyVideoPlayerState extends State<MyVideoPlayer> {
 
   @override
   Widget build(BuildContext context) {
-    return VideoPlayer(videoPlayerController);
+    return ColoredBox(
+      color: AppColors.grey,
+      child: AspectRatio(
+        aspectRatio: videoPlayerController.value.aspectRatio,
+        child: VideoPlayer(videoPlayerController),
+      ),
+    );
   }
 
   @override
@@ -35,6 +43,3 @@ class _MyVideoPlayerState extends State<MyVideoPlayer> {
     super.dispose();
   }
 }
-
-
-

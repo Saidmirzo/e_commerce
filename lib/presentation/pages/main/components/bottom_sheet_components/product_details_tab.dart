@@ -22,23 +22,26 @@ class ProductDetailsTab extends StatelessWidget {
           margin: EdgeInsets.symmetric(vertical: 35.h),
           child: SingleChildScrollView(
             scrollDirection: Axis.horizontal,
+            padding: EdgeInsets.only(left: 26.w),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                ...["#boho gal", "#beach wibes", "#denim"].map((text) => Container(
-                      width: 93.w,
-                      height: 30.h,
-                      margin: EdgeInsets.only(right: 4.5.w),
-                      alignment: Alignment.center,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(9.r),
-                        color: AppColors.grey.withOpacity(.3),
-                      ),
-                      child: Text(
-                        text,
-                        style: AppTextStyles.body12w5.copyWith(color: AppColors.baseLight.shade100),
-                      ),
-                    )),
+                ...["#boho gal", "#beach wibes", "#denim"]
+                    .map((text) => Container(
+                          width: 93.w,
+                          height: 30.h,
+                          margin: EdgeInsets.only(right: 4.5.w),
+                          alignment: Alignment.center,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(9.r),
+                            color: AppColors.grey.withOpacity(.3),
+                          ),
+                          child: Text(
+                            text,
+                            style: AppTextStyles.body12w5
+                                .copyWith(color: AppColors.baseLight.shade100),
+                          ),
+                        )),
                 Container(
                   width: 33.h,
                   height: 33.h,
@@ -71,7 +74,8 @@ class ProductDetailsTab extends StatelessWidget {
                     width: 244.w,
                     child: Text(
                       productDetails.values.elementAt(index),
-                      style: AppTextStyles.body13w4.copyWith(color: AppColors.baseLight.shade50),
+                      style: AppTextStyles.body13w4
+                          .copyWith(color: AppColors.baseLight.shade50),
                     ),
                   ),
                 ],

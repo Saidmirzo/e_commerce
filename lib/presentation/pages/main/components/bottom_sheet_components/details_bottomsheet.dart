@@ -42,28 +42,23 @@ class _DetailsBottomSheetState extends State<DetailsBottomSheet>
             ),
             gradient: AppColors.gradients.detailsGradient,
           ),
-          child: Stack(
+          child: Column(
             children: [
-              Column(
-                children: [
-                  const CustomDivider(),
-                  MyTabbar(tabController: tabController),
-                  Flexible(
-                    fit: FlexFit.tight,
-                    child: TabBarView(
-                      controller: tabController,
-                      children: [
-                        ProductDetailsTab(productDetails: productDetails),
-                        const DetailsShippingWidget(),
-                        Container(),
-                        const DetailsSizeAndFit(),
-                        const ReviewsTab(),
-                      ],
-                    ),
-                  ),
-                ],
+              const CustomDivider(),
+              MyTabbar(tabController: tabController),
+              Flexible(
+                fit: FlexFit.tight,
+                child: TabBarView(
+                  controller: tabController,
+                  children: [
+                    ProductDetailsTab(productDetails: productDetails),
+                    const DetailsShippingWidget(),
+                    Container(),
+                    const DetailsSizeAndFit(),
+                    const ReviewsTab(),
+                  ],
+                ),
               ),
-              const MyAppBar(),
             ],
           ),
         ),
