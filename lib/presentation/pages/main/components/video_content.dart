@@ -1,5 +1,4 @@
 import 'package:e_commerce/presentation/pages/main/components/video_player.dart';
-import 'package:e_commerce/presentation/pages/main/components/widget_categories.dart';
 import 'package:e_commerce/presentation/pages/main/components/widget_opinions.dart';
 import 'package:flutter/material.dart';
 
@@ -38,7 +37,6 @@ class VideoItem extends StatelessWidget {
       children: [
         MyVideoPlayer(url: url),
         const BottomAbout(),
-        Categories(),
         const Opinions(),
       ],
     );

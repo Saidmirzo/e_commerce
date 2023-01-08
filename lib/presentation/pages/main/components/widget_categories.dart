@@ -9,7 +9,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import '../../../components/categories_button_widget.dart';
 
 class Categories extends StatefulWidget {
-  Categories({
+  const Categories({
     Key? key,
   }) : super(key: key);
 
