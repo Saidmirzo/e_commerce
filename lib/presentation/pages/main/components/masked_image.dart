@@ -15,12 +15,14 @@ class MaskedImage extends StatelessWidget {
       builder: (context, snap) => snap.hasData
           ? ShaderMask(
               blendMode: BlendMode.srcATop,
-              shaderCallback: (bounds) => ImageShader(
-                snap.data!,
-                TileMode.clamp,
-                TileMode.clamp,
-                Matrix4.identity().storage,
-              ),
+              shaderCallback: (bounds) {
+                return ImageShader(
+                  snap.data!,
+                  TileMode.mirror,
+                  TileMode.decal,
+                  Matrix4.identity().storage,
+                );
+              },
               child: child,
             )
           : Container(),

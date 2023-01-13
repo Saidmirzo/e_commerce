@@ -19,6 +19,7 @@ dependencies:
   flutter_screenutil: ^5.5.4
   video_player: ^2.4.10
   flutter_svg: ^1.1.5
+  widget_mask: ^1.0.0+0
 
 dev_dependencies:
   flutter_test:
@@ -66,10 +67,12 @@ flutter:
           weight: 300
         - asset: fonts/plus_jakarta_display/PlusJakartaSans-ExtraLight.ttf
           weight: 200
-    # - family: Grafita
-    #   fonts:
-    #     - asset: fonts/grafita-normal.ttf
-    #       weight: 500
+    - family: Grafita
+      fonts:
+        - asset: fonts/grafita/Slava Antipov - Grafita Normal DEMO.ttf
+          weight: 400
+        - asset: fonts/grafita/Slava Antipov - Grafita Normal.ttf
+          weight: 500
   #         style: italic
   #   - family: Trajan Pro
   #     fonts:

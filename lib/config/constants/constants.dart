@@ -49,24 +49,40 @@ Map<String, String> productDetails = {
   "Features":
       "The Silver Down Metallic Puffer Jacket is a composition of the exceptional quality parachute fabric. ",
 };
+final List<String> moreImges = [Assets.images.person2, Assets.images.person3];
 
- final  List<VideoModel> urls = [
-    VideoModel(videoUrl: Assets.videos.video1, isImg: false),
-    VideoModel(videoUrl: Assets.videos.video2, isImg: false),
-
-    VideoModel(imgUrls: [Assets.images.img1, Assets.images.img2], isImg: true),
-
-    VideoModel(videoUrl: Assets.videos.video3, isImg: false),
-    
-  ];
+final List<VideoModel> urls = [
+  VideoModel(
+    videoUrl: Assets.videos.video1,
+    isImg: false,
+    moreImgUrls: moreImges,
+  ),
+  VideoModel(
+    videoUrl: Assets.videos.video2,
+    isImg: false,
+    moreImgUrls: moreImges,
+  ),
+  VideoModel(
+    imgUrls: [Assets.images.img1, Assets.images.img2],
+    isImg: true,
+    moreImgUrls: moreImges,
+  ),
+  VideoModel(
+    videoUrl: Assets.videos.video3,
+    isImg: false,
+    moreImgUrls: moreImges,
+  ),
+];
 
 class VideoModel {
   VideoModel({
     this.videoUrl,
     this.imgUrls,
     required this.isImg,
+    required this.moreImgUrls,
   });
   final List<String>? imgUrls;
   final String? videoUrl;
   final bool isImg;
+  final List<String> moreImgUrls;
 }
