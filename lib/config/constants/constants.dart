@@ -86,3 +86,51 @@ class VideoModel {
   final bool isImg;
   final List<String> moreImgUrls;
 }
+
+List<BagCartModel> listBagCarts = [
+  BagCartModel(
+      imgPath: Assets.images.redCoat,
+      name: 'Red Coat',
+      cost: 200,
+      size: 'XS',
+      color: AppColors.coatColor),
+  BagCartModel(
+      imgPath: Assets.images.sneakres,
+      name: 'White sneakers',
+      cost: 400,
+      size: 'XS',
+      color: AppColors.accentColor),
+  BagCartModel(
+      imgPath: Assets.images.pants,
+      name: 'Black pants',
+      cost: 300,
+      size: 'XS',
+      color: AppColors.accentColor),
+  BagCartModel(
+      imgPath: Assets.images.redCoat,
+      name: 'Red Coat',
+      cost: 200,
+      size: 'XS',
+      color: AppColors.coatColor),
+  BagCartModel(
+      imgPath: Assets.images.sneakres,
+      name: 'Red Coat',
+      cost: 200,
+      size: 'XS',
+      color: AppColors.accentColor),
+];
+
+class BagCartModel {
+  BagCartModel({
+    required this.imgPath,
+    required this.name,
+    required this.cost,
+    required this.size,
+    required this.color,
+  });
+  final String imgPath;
+  final String name;
+  final double cost;
+  final String size;
+  final Color color;
+}

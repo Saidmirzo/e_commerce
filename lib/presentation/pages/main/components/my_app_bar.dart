@@ -1,5 +1,6 @@
 import 'package:e_commerce/config/constants/app_text_styles.dart';
 import 'package:e_commerce/presentation/components/custom_divider.dart';
+import 'package:e_commerce/presentation/pages/main/components/bag_bottom_sheet/your_bag_bottom_sheet.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -47,19 +48,10 @@ class MyAppBar extends StatelessWidget {
                       EdgeInsets.symmetric(horizontal: 18.w, vertical: 8.h),
                   onPressed: () {
                     showBottomSheet(
+                      backgroundColor: Colors.transparent,
                       context: context,
                       builder: (context) {
-                        return Container(
-                            child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            CustomDivider(),
-                            Text(
-                              'Your Bag',
-                              style: AppTextStyles.head30w5,
-                            )
-                          ],
-                        ));
+                        return const YourBagBottomSheet();
                       },
                     );
                   },
