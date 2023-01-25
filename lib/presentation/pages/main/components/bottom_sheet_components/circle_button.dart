@@ -16,26 +16,24 @@ class CircleButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
+    return GestureDetector(
       onTap: () {
         onTap();
       },
       child: Container(
-        height: 28.h,
-        width: 28.h,
-        padding: const EdgeInsets.all(2),
+        height: 36.h,
+        width: 36.h,
+        padding: isActive ? EdgeInsets.all(10.h) : EdgeInsets.all(7.h),
         decoration: BoxDecoration(
           shape: BoxShape.circle,
           border: isActive
               ? Border.all(
-                  color: AppColors.accentColor,
+                  color: color,
                   width: 1,
                 )
               : null,
         ),
         child: Container(
-          height: 26.h,
-          width: 26.h,
           decoration: BoxDecoration(
             shape: BoxShape.circle,
             color: color,

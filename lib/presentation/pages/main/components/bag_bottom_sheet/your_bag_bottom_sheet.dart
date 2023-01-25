@@ -50,7 +50,7 @@ class _YourBagBottomSheetState extends State<YourBagBottomSheet> {
             ),
           ),
           SizedBox(
-            height: 220.h,
+            height: 230.h,
             child: ListView.builder(
               padding: EdgeInsets.only(left: 27.w, top: 10.h),
               physics: const BouncingScrollPhysics(),

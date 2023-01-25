@@ -16,17 +16,28 @@ abstract class AppColors {
   static const Color blue = Color(0xff3678BD);
   static const Color borderColor3 = Color(0xff5E5E5E);
   static const Color buttonColor2 = Color(0xff20201F);
-  static const  Color coatColor =  Color(0xffFF2E00);
-  static const  Color bagBottomSheetColor =  Color(0xff0B0A0A);
+  static const Color coatColor = Color(0xffFF2E00);
+  static const Color bagBottomSheetColor = Color(0xff0B0A0A);
+  static const Color badgeColor = Color(0xffFF4746);
+  static const Color removeButtonColor = Color(0xffFF5151);
 
-  static  Color dividerColor = const Color(0xffB5ADAD).withOpacity(.7);
-  static  Color borderColor2 = const Color(0xffFFF5F5).withOpacity(.31);
+  static Color dividerColor = const Color(0xffB5ADAD).withOpacity(.7);
+  static Color borderColor2 = const Color(0xffFFF5F5).withOpacity(.31);
 
   static List<Color> cartGrColors = [
     const Color(0xff383E4F),
     const Color(0xff383D4D),
     const Color(0xff5A6278),
     const Color(0xff1A1E2A),
+  ];
+  static List<Color> filterColors = [
+    const Color(0xffF7CD67),
+    const Color(0xff8ACD95),
+    const Color(0xffCEA9F9),
+    const Color(0xffFBA173),
+    const Color(0xff9E6CC3),
+    const Color(0xffFEF8B3),
+    const Color(0xffB4B4B4),
   ];
 
   static Gradients gradients = const Gradients();

@@ -1,5 +1,7 @@
+import 'package:e_commerce/config/constants/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import '../../../../../config/constants/app_colors.dart';
 import '../../../../../config/constants/app_text_styles.dart';
 import 'animation_cart.dart';
@@ -26,29 +28,47 @@ class BagCartWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 8.w),
+      padding: EdgeInsets.symmetric(horizontal: 0.w),
       child: Column(
         children: [
           Stack(
             alignment: Alignment.topRight,
             children: [
-              AnimatedCart(
-                path: path,
-                isAnim: removeButton,
+              Container(
+                height: 146.h,
+                width: 100.w,
+                margin: EdgeInsets.only(
+                    bottom: 13.h, right: 8.w, left: 8.w, top: 10.h),
+                alignment: Alignment.center,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(13.r),
+                  color: AppColors.cartBgColor,
+                ),
+                child: Image.asset(path),
               ),
               Visibility(
                 visible: removeButton,
                 child: Align(
                   alignment: Alignment.topRight,
-                  child: IconButton(
-                    alignment: Alignment.topRight,
-                    padding: const EdgeInsets.all(3),
-                    onPressed: () {
+                  child: GestureDetector(
+                    onTap: () {
                       funcRemove();
                     },
-                    icon: Icon(
-                      Icons.cancel_rounded,
-                      color: AppColors.accentColor.withOpacity(.5),
+                    child: Container(
+                      height: 24.h,
+                      width: 24.h,
+                      padding: EdgeInsets.all(4.h),
+                      decoration: const BoxDecoration(
+                          color: AppColors.black, shape: BoxShape.circle),
+                      child: Container(
+                        height: 20.h,
+                        width: 20.h,
+                        padding: const EdgeInsets.all(3),
+                        decoration: const BoxDecoration(
+                            color: AppColors.removeButtonColor,
+                            shape: BoxShape.circle),
+                        child: SvgPicture.asset(Assets.icons.cancel),
+                      ),
                     ),
                   ),
                 ),
@@ -88,5 +108,3 @@ class BagCartWidget extends StatelessWidget {
     );
   }
 }
-
-

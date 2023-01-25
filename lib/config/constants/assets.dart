@@ -49,6 +49,12 @@ class _Icons extends _AssetsHolder {
   String get arrowTop => "$basePath/arrow_top.svg";
 
   String get edit => "$basePath/edit.svg";
+
+  String get iconSlider => "$basePath/slider_icon.svg";
+
+  String get check => "$basePath/check.svg";
+
+  String get cancel => "$basePath/icon_cancel.svg";
 }
 
 class _Images extends _AssetsHolder {

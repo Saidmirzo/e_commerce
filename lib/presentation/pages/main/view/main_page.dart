@@ -6,7 +6,6 @@ import '../components/widget_categories.dart';
 
 class MainPage extends StatelessWidget {
   const MainPage({super.key});
- 
 
   @override
   Widget build(BuildContext context) {
@@ -21,5 +20,3 @@ class MainPage extends StatelessWidget {
     );
   }
 }
-
-
