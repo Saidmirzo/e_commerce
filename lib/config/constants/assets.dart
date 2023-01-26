@@ -48,6 +48,8 @@ class _Icons extends _AssetsHolder {
 
   String get arrowTop => "$basePath/arrow_top.svg";
 
+  String get arrowLeft => "$basePath/arrow_left.svg";
+
   String get edit => "$basePath/edit.svg";
 
   String get iconSlider => "$basePath/slider_icon.svg";
@@ -55,6 +57,8 @@ class _Icons extends _AssetsHolder {
   String get check => "$basePath/check.svg";
 
   String get cancel => "$basePath/icon_cancel.svg";
+
+  String get search => "$basePath/ic_search.svg";
 }
 
 class _Images extends _AssetsHolder {
@@ -81,6 +85,18 @@ class _Images extends _AssetsHolder {
   String get pants => "$basePath/pants.png";
 
   String get sneakres => "$basePath/sneakres.png";
+
+  String get winterJackets => "$basePath/img_winter_jacket.png";
+
+  String get windbrakers => "$basePath/img_windbrakers.png";
+
+  String get bomber => "$basePath/img_bomber.png";
+
+  String get plaid => "$basePath/img_plaid.png";
+
+  String get striped => "$basePath/img_striped.png";
+
+  String get shirt => "$basePath/img_shirt.png";
 }
 
 class _Videos extends _AssetsHolder {

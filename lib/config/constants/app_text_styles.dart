@@ -15,6 +15,18 @@ abstract class AppTextStyles {
       fontStyle: FontStyle.normal,
       fontSize: 29.sp,
       color: AppColors.textColor.shade1);
+  static TextStyle head32w7 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w700,
+      fontStyle: FontStyle.normal,
+      fontSize: 32.sp,
+      color: AppColors.textColor.shade1);
+  static TextStyle head32w4 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w400,
+      fontStyle: FontStyle.normal,
+      fontSize: 32.sp,
+      color: AppColors.textColor.shade1);
 
   static TextStyle head84w7 = TextStyle(
       fontFamily: fontFamily,

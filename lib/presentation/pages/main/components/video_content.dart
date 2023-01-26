@@ -1,5 +1,6 @@
 import 'package:e_commerce/presentation/pages/main/components/image_view_widget.dart';
 import 'package:e_commerce/presentation/pages/main/components/video_player.dart';
+import 'package:e_commerce/presentation/pages/main/components/widget_categories.dart';
 import 'package:e_commerce/presentation/pages/main/components/widget_opinions.dart';
 import 'package:flutter/material.dart';
 import '../../../../config/constants/constants.dart';
@@ -13,11 +14,16 @@ class VideoContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PageView(
-      scrollDirection: Axis.vertical,
-      children: urls.map((VideoModel url) {
-        return VideoItem(url: url);
-      }).toList(),
+    return Stack(
+      children: [
+        PageView(
+          scrollDirection: Axis.vertical,
+          children: urls.map((VideoModel url) {
+            return VideoItem(url: url);
+          }).toList(),
+        ),
+        const Categories(),
+      ],
     );
   }
 }
@@ -41,7 +47,7 @@ class _VideoItemState extends State<VideoItem> {
     return Stack(
       children: [
         if (isMore)
-          MoreImagesViewWidget( url: widget.url)
+          MoreImagesViewWidget(url: widget.url)
         else if (widget.url.isImg)
           ImageView(urls: widget.url.imgUrls!)
         else
@@ -59,5 +65,3 @@ class _VideoItemState extends State<VideoItem> {
     );
   }
 }
-
-

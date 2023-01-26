@@ -3,11 +3,74 @@ import 'dart:ui';
 import 'app_colors.dart';
 import 'assets.dart';
 
-List<String> listFilterProdNames = ["Category", "Size", "Color", "Material", "Price", "Style"];
+List<SearchModel> listSearchCategory = [
+  SearchModel(
+    categoryName: "Jackets",
+    listImgPaths: [
+      Assets.images.winterJackets,
+      Assets.images.bomber,
+      Assets.images.windbrakers,
+    ],
+    listImgSubName: ["Winter Jackets", "Bombers", "Windbrakers"]
+  ),
+  SearchModel(
+    categoryName: "Blouses",
+    listImgPaths: [
+      Assets.images.plaid,
+      Assets.images.striped,
+      Assets.images.shirt,
+    ],
+    listImgSubName: ["Plaid", "Striped", "Shirt"]
+  ),
+
+];
+
+class SearchModel {
+  SearchModel(
+      {required this.categoryName,
+      required this.listImgPaths,
+      required this.listImgSubName});
+  final String categoryName;
+  final List<String> listImgPaths;
+  final List<String> listImgSubName;
+}
+
+List<String> listFilterProdNames = [
+  "Category",
+  "Size",
+  "Color",
+  "Material",
+  "Price",
+  "Style"
+];
 List<String> listCategoryItems = ["New", "Popular", "Sale"];
 List<String> listSizeItems = ["XS", "S", "M", "L", "XL"];
-List<String> listMaterialTexts = ["ABC", "Acrylic", "Aluminum Alloy", "EVA", "Fabric", "Glass"];
-List<String> listStyleTexts = ["Heat Coat", "Full Show", "Jekcket", "Half Show", "Glass", "Glass"];
+List<String> listMaterialTexts = [
+  "ABC",
+  "Acrylic",
+  "Aluminum Alloy",
+  "EVA",
+  "Fabric",
+  "Glass"
+];
+List<String> listStyleTexts = [
+  "Heat Coat",
+  "Full Show",
+  "Jekcket",
+  "Half Show",
+  "Glass",
+  "Glass"
+];
+
+List<String> listPopularSearchs = [
+  "#partylook",
+  "#beach wibes",
+  "#denim",
+  "#pink jacket",
+  "#caps",
+  "#bloses",
+  "#summer outfit",
+];
 
 class Product {
   Product({
@@ -15,7 +78,8 @@ class Product {
     required this.shoulder,
     required this.length,
     required this.sleeve,
-    required this.bust,    required this.cuff,
+    required this.bust,
+    required this.cuff,
   });
   final String size;
   final double shoulder;

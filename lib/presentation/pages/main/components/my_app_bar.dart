@@ -8,10 +8,29 @@ import 'package:flutter_svg/svg.dart';
 import '../../../../config/constants/app_colors.dart';
 import '../../../../config/constants/assets.dart';
 
-class MyAppBar extends StatelessWidget {
-  const MyAppBar({
+class MyBottomNavigationBar extends StatefulWidget {
+  const MyBottomNavigationBar({
     Key? key,
+    required this.pageController,
   }) : super(key: key);
+  final PageController pageController;
+
+  @override
+  State<MyBottomNavigationBar> createState() => _MyBottomNavigationBarState();
+}
+
+class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
+  double activeIndex = 0;
+
+  @override
+  void initState() {
+    super.initState();
+    widget.pageController.addListener(() {
+      setState(() {
+        activeIndex = widget.pageController.page ?? 0;
+      });
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -36,12 +55,24 @@ class MyAppBar extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 IconButton(
-                  onPressed: () {},
-                  icon: SvgPicture.asset(Assets.icons.flash),
+                  onPressed: () {
+                    widget.pageController.jumpTo(0);
+                  },
+                  icon: SvgPicture.asset(
+                    Assets.icons.flash,
+                    color: activeIndex == 0 ? AppColors.accentColor : null,
+                  ),
                 ),
                 IconButton(
-                  onPressed: () {},
-                  icon: SvgPicture.asset(Assets.icons.eye),
+                  onPressed: () {
+                    widget.pageController.jumpToPage(1);
+                  },
+                  icon: SvgPicture.asset(
+                    Assets.icons.search,
+                    color: activeIndex == 1
+                        ? AppColors.accentColor
+                        : null,
+                  ),
                 ),
                 IconButton(
                   padding:
@@ -60,11 +91,17 @@ class MyAppBar extends StatelessWidget {
                 ),
                 IconButton(
                   onPressed: () {},
-                  icon: SvgPicture.asset(Assets.icons.notification),
+                  icon: SvgPicture.asset(
+                    Assets.icons.notification,
+                    color: activeIndex == 3 ? AppColors.accentColor : null,
+                  ),
                 ),
                 IconButton(
                   onPressed: () {},
-                  icon: SvgPicture.asset(Assets.icons.frame),
+                  icon: SvgPicture.asset(
+                    Assets.icons.frame,
+                    color: activeIndex == 4 ? AppColors.accentColor : null,
+                  ),
                 ),
               ],
             ),

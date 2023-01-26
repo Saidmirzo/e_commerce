@@ -1,4 +1,3 @@
-
 import 'dart:ui';
 
 import 'package:e_commerce/config/constants/app_colors.dart';
@@ -10,6 +9,7 @@ import 'package:e_commerce/presentation/pages/main/components/video_player.dart'
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+
 class TextButtonGradient extends StatelessWidget {
   const TextButtonGradient({
     Key? key,
@@ -34,7 +34,6 @@ class TextButtonGradient extends StatelessWidget {
       child: Padding(
         padding: EdgeInsets.only(right: 10.w),
         child: ClipRRect(
-          
           borderRadius: BorderRadius.circular(borderRaius ?? 5.r),
           child: BackdropFilter(
             filter: ImageFilter.blur(sigmaX: 5, sigmaY: 5),

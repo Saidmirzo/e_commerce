@@ -20,6 +20,7 @@ abstract class AppColors {
   static const Color bagBottomSheetColor = Color(0xff0B0A0A);
   static const Color badgeColor = Color(0xffFF4746);
   static const Color removeButtonColor = Color(0xffFF5151);
+  static  Color searchColor = const Color(0xffFFFFFF).withOpacity(.08);
 
   static Color dividerColor = const Color(0xffB5ADAD).withOpacity(.7);
   static Color borderColor2 = const Color(0xffFFF5F5).withOpacity(.31);
