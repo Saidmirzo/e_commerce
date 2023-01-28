@@ -11,7 +11,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../components/amount_column_widget.dart';
 import '../components/custom_clipped_button.dart';
+import '../components/order_information_widget.dart';
 import '../components/payment_method_widget.dart';
+import '../components/text_row_with_divider.dart';
 
 class OrderConfirmationPage extends StatelessWidget {
   const OrderConfirmationPage({super.key});
@@ -98,77 +100,13 @@ class OrderConfirmationPage extends StatelessWidget {
                             ],
                           ),
                         ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Container(
-                              height: 97.h,
-                              width: 100.w,
-                              margin: EdgeInsets.only(right: 22.w),
-                              decoration: BoxDecoration(
-                                color: AppColors.accentColor.withOpacity(.05),
-                                borderRadius: BorderRadius.circular(11.r),
-                              ),
-                              child: Image.asset(Assets.images.redCoat),
-                            ),
-                            Expanded(
-                              child: Row(
-                                crossAxisAlignment: CrossAxisAlignment.end,
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text('Red Coat',
-                                          style: AppTextStyles.body16w8),
-                                      Padding(
-                                        padding: EdgeInsets.only(
-                                            top: 7.h, bottom: 17.h),
-                                        child: Row(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.end,
-                                          children: [
-                                            Text(
-                                              'Size XS Color',
-                                              style: AppTextStyles.body12w6
-                                                  .copyWith(
-                                                color: AppColors.accentColor
-                                                    .withOpacity(.5),
-                                              ),
-                                            ),
-                                            Container(
-                                              height: 13.h,
-                                              width: 13.h,
-                                              margin:
-                                                  EdgeInsets.only(left: 10.w),
-                                              child: CircleButton(
-                                                isActive: true,
-                                                color: AppColors.coatColor,
-                                                onTap: () {},
-                                                padding: EdgeInsets.all(3.h),
-                                              ),
-                                            )
-                                          ],
-                                        ),
-                                      ),
-                                      Text(
-                                        '1 item',
-                                        style: AppTextStyles.body12w6.copyWith(
-                                          color: AppColors.textColor3,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                  Text(
-                                    r'$200.00',
-                                    style: AppTextStyles.body14w8,
-                                  )
-                                ],
-                              ),
-                            ),
-                          ],
+                        OrderInformationWidget(
+                          name: 'Red Coat',
+                          color: AppColors.coatColor,
+                          cost: 200.00,
+                          picture: Assets.images.redCoat,
+                          count: 1,
+                          size: 'XS',
                         ),
                         Text('Delivery method', style: AppTextStyles.body18w7),
                         Container(
@@ -344,53 +282,6 @@ class OrderConfirmationPage extends StatelessWidget {
             )
           ],
         ),
-      ),
-    );
-  }
-}
-
-
-
-class TextRowWithDivider extends StatelessWidget {
-  const TextRowWithDivider({
-    Key? key,
-    required this.name,
-    this.text,
-  }) : super(key: key);
-  final String name;
-  final String? text;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.only(top: 20.h),
-      child: Column(
-        children: [
-          Row(
-            children: [
-              Text(
-                name,
-                style: AppTextStyles.body13w7
-                    .copyWith(color: AppColors.textColor3),
-              ),
-              const Spacer(),
-              Text(
-                text ?? '',
-                style: AppTextStyles.body13w7.copyWith(
-                  color: AppColors.textColor3,
-                ),
-              ),
-              SizedBox(width: 10.w),
-              SvgPicture.asset(Assets.icons.arrowRight),
-            ],
-          ),
-          SizedBox(height: 24.h),
-          Divider(
-            color: AppColors.dividerColor2,
-            thickness: 1,
-            height: 1,
-          ),
-        ],
       ),
     );
   }
