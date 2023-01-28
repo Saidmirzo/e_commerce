@@ -41,7 +41,7 @@ class DetailsShippingWidget extends StatelessWidget {
                 child: Text(
                   r'Free express shipping on orders over US$129.00 Estimated to be delivered on 19/08/2022 - 26/08/2022.',
                   style: AppTextStyles.body13w4.copyWith(
-                    color: AppColors.accentColor.withOpacity(.5),
+                    color: AppColors.textColor3,
                   ),
                 ),
               )

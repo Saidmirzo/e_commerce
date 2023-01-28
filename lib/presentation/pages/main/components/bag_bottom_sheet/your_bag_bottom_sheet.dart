@@ -45,7 +45,7 @@ class _YourBagBottomSheetState extends State<YourBagBottomSheet> {
             child: Text(
               '${listBagCarts.length} items',
               style: AppTextStyles.body15w4.copyWith(
-                color: AppColors.accentColor.withOpacity(.5),
+                color: AppColors.textColor3,
               ),
             ),
           ),

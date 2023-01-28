@@ -11,6 +11,7 @@ abstract class AppColors {
   static const Color indicatorColor = Color(0xff5387FF);
   static const Color textColor1 = Color(0xff9391A8);
   static const Color textColor2 = Color(0xffCBCAC9);
+  static  Color textColor3 = const Color(0xffFFFFFF).withOpacity(.5);
   static const Color filterBgColor = Color(0xff555962);
   static const Color buttonColor = Color(0xffE9FF8F);
   static const Color blue = Color(0xff3678BD);
@@ -20,9 +21,12 @@ abstract class AppColors {
   static const Color bagBottomSheetColor = Color(0xff0B0A0A);
   static const Color badgeColor = Color(0xffFF4746);
   static const Color removeButtonColor = Color(0xffFF5151);
+  static const Color switchColor = Color(0xff1C1C1C);
   static  Color searchColor = const Color(0xffFFFFFF).withOpacity(.08);
+  static  Color textFieldBgColor = const Color(0xffF6F6F6).withOpacity(.08);
 
   static Color dividerColor = const Color(0xffB5ADAD).withOpacity(.7);
+  static Color dividerColor2 = const Color(0xff808080).withOpacity(.2);
   static Color borderColor2 = const Color(0xffFFF5F5).withOpacity(.31);
 
   static List<Color> cartGrColors = [

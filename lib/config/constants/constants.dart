@@ -4,25 +4,24 @@ import 'app_colors.dart';
 import 'assets.dart';
 
 List<SearchModel> listSearchCategory = [
-  SearchModel(
-    categoryName: "Jackets",
-    listImgPaths: [
-      Assets.images.winterJackets,
-      Assets.images.bomber,
-      Assets.images.windbrakers,
-    ],
-    listImgSubName: ["Winter Jackets", "Bombers", "Windbrakers"]
-  ),
-  SearchModel(
-    categoryName: "Blouses",
-    listImgPaths: [
-      Assets.images.plaid,
-      Assets.images.striped,
-      Assets.images.shirt,
-    ],
-    listImgSubName: ["Plaid", "Striped", "Shirt"]
-  ),
-
+  SearchModel(categoryName: "Jackets", listImgPaths: [
+    Assets.images.winterJackets,
+    Assets.images.bomber,
+    Assets.images.windbrakers,
+  ], listImgSubName: [
+    "Winter Jackets",
+    "Bombers",
+    "Windbrakers"
+  ]),
+  SearchModel(categoryName: "Blouses", listImgPaths: [
+    Assets.images.plaid,
+    Assets.images.striped,
+    Assets.images.shirt,
+  ], listImgSubName: [
+    "Plaid",
+    "Striped",
+    "Shirt"
+  ]),
 ];
 
 class SearchModel {
@@ -203,3 +202,20 @@ class BagCartModel {
   final String size;
   final Color color;
 }
+
+class PaymentMethotModel {
+  PaymentMethotModel({
+    required this.prefixIcon,
+    required this.title,
+    required this.suffixIcon,
+  });
+  final String prefixIcon;
+  final String title;
+  final String suffixIcon;
+}
+
+List<PaymentMethotModel> listPaymentMethods = [
+  PaymentMethotModel(prefixIcon: Assets.icons.creditCard, title: 'Credit/Debit card', suffixIcon: Assets.icons.logoVisa),
+  PaymentMethotModel(prefixIcon: Assets.icons.payPal, title: 'PayPal', suffixIcon: Assets.icons.logoPayPal),
+  PaymentMethotModel(prefixIcon: Assets.icons.applePay, title: 'Apple Pay', suffixIcon: Assets.icons.logoApplePay),
+];

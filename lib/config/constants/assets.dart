@@ -59,6 +59,25 @@ class _Icons extends _AssetsHolder {
   String get cancel => "$basePath/icon_cancel.svg";
 
   String get search => "$basePath/ic_search.svg";
+
+  String get location => "$basePath/location.svg";
+
+  String get arrowRight => "$basePath/arrow_right.svg";
+
+  String get flagUa => "$basePath/flag_ua.svg";
+  
+  String get creditCard => "$basePath/ic_credit_card.svg";
+  
+  String get payPal => "$basePath/ic_pay_pal.svg";
+  
+  String get applePay => "$basePath/ic_apple_pay.svg";
+  
+  String get logoVisa => "$basePath/logo_visa.svg";
+  
+  String get logoPayPal => "$basePath/logo_pay_pal.svg";
+  
+  String get logoApplePay => "$basePath/logo_apple_pay.svg";
+  
 }
 
 class _Images extends _AssetsHolder {

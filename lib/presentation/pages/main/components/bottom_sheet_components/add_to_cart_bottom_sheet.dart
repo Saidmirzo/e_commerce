@@ -67,7 +67,7 @@ class _AddToCartBottomSheetState extends State<AddToCartBottomSheet> {
                       TextSpan(
                         text: 'Total Black',
                         style: AppTextStyles.body16w4.copyWith(
-                          color: AppColors.accentColor.withOpacity(.5),
+                          color: AppColors.textColor3,
                         ),
                       )
                     ],
@@ -159,5 +159,3 @@ class _AddToCartBottomSheetState extends State<AddToCartBottomSheet> {
     );
   }
 }
-
-

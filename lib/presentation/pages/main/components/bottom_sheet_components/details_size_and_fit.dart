@@ -111,8 +111,8 @@ class _DetailsSizeAndFitState extends State<DetailsSizeAndFit> {
                     Center(
                       child: Text(
                         products[index].shoulder.toString(),
-                        style: AppTextStyles.body15w5.copyWith(
-                            color: AppColors.accentColor.withOpacity(.5)),
+                        style: AppTextStyles.body15w5
+                            .copyWith(color: AppColors.textColor3),
                       ),
                     ),
                   ),
@@ -120,8 +120,8 @@ class _DetailsSizeAndFitState extends State<DetailsSizeAndFit> {
                     Center(
                       child: Text(
                         products[index].length.toString(),
-                        style: AppTextStyles.body15w5.copyWith(
-                            color: AppColors.accentColor.withOpacity(.5)),
+                        style: AppTextStyles.body15w5
+                            .copyWith(color: AppColors.textColor3),
                       ),
                     ),
                   ),
@@ -129,8 +129,8 @@ class _DetailsSizeAndFitState extends State<DetailsSizeAndFit> {
                     Center(
                       child: Text(
                         products[index].sleeve.toString(),
-                        style: AppTextStyles.body15w5.copyWith(
-                            color: AppColors.accentColor.withOpacity(.5)),
+                        style: AppTextStyles.body15w5
+                            .copyWith(color: AppColors.textColor3),
                       ),
                     ),
                   ),
@@ -139,7 +139,8 @@ class _DetailsSizeAndFitState extends State<DetailsSizeAndFit> {
                       child: Text(
                         products[index].bust.toString(),
                         style: AppTextStyles.body15w5.copyWith(
-                            color: AppColors.accentColor.withOpacity(.5)),
+                          color: AppColors.textColor3,
+                        ),
                       ),
                     ),
                   ),
@@ -147,8 +148,8 @@ class _DetailsSizeAndFitState extends State<DetailsSizeAndFit> {
                     Center(
                       child: Text(
                         products[index].cuff.toString(),
-                        style: AppTextStyles.body15w5.copyWith(
-                            color: AppColors.accentColor.withOpacity(.5)),
+                        style: AppTextStyles.body15w5
+                            .copyWith(color: AppColors.textColor3),
                       ),
                     ),
                   ),

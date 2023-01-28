@@ -32,7 +32,7 @@ class SearchPage extends StatelessWidget {
                         child: Text(
                           'Popular searches',
                           style: AppTextStyles.body13w5.copyWith(
-                            color: AppColors.accentColor.withOpacity(.5),
+                            color: AppColors.textColor3,
                           ),
                         ),
                       ),

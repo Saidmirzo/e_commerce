@@ -151,10 +151,29 @@ abstract class AppTextStyles {
       fontStyle: FontStyle.normal,
       fontSize: 18.sp,
       color: AppColors.textColor.shade1);
+   static TextStyle body18w7 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w700,
+      fontStyle: FontStyle.normal,
+      fontSize: 18.sp,
+      color: AppColors.textColor.shade1);
+   static TextStyle body18w8 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w800,
+      fontStyle: FontStyle.normal,
+      fontSize: 18.sp,
+      color: AppColors.textColor.shade1);
 
   static TextStyle body16w7 = TextStyle(
       fontFamily: fontFamily,
       fontWeight: FontWeight.w700,
+      fontStyle: FontStyle.normal,
+      fontSize: 16.sp,
+      color: AppColors.textColor.shade1);
+  
+  static TextStyle body16w8 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w800,
       fontStyle: FontStyle.normal,
       fontSize: 16.sp,
       color: AppColors.textColor.shade1);
@@ -281,6 +300,12 @@ abstract class AppTextStyles {
       fontStyle: FontStyle.normal,
       fontSize: 13.sp,
       color: AppColors.textColor.shade1);
+  static TextStyle body13w6 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w600,
+      fontStyle: FontStyle.normal,
+      fontSize: 13.sp,
+      color: AppColors.textColor.shade1);
   static TextStyle body13w7 = TextStyle(
       fontFamily: fontFamily,
       fontWeight: FontWeight.w700,
@@ -310,6 +335,12 @@ abstract class AppTextStyles {
   static TextStyle body14w7 = TextStyle(
       fontFamily: fontFamily,
       fontWeight: FontWeight.w700,
+      fontStyle: FontStyle.normal,
+      fontSize: 14.sp,
+      color: AppColors.textColor.shade1);
+   static TextStyle body14w8 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w800,
       fontStyle: FontStyle.normal,
       fontSize: 14.sp,
       color: AppColors.textColor.shade1);
@@ -347,6 +378,12 @@ abstract class AppTextStyles {
   static TextStyle body17w7 = TextStyle(
       fontFamily: fontFamily,
       fontWeight: FontWeight.w700,
+      fontStyle: FontStyle.normal,
+      fontSize: 17.sp,
+      color: AppColors.textColor.shade1);
+  static TextStyle body17w8 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w800,
       fontStyle: FontStyle.normal,
       fontSize: 17.sp,
       color: AppColors.textColor.shade1);
