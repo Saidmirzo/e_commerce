@@ -4,7 +4,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../../../../../config/constants/app_colors.dart';
 import '../../../../../config/constants/app_text_styles.dart';
-import 'animation_cart.dart';
 
 class BagCartWidget extends StatelessWidget {
   const BagCartWidget({

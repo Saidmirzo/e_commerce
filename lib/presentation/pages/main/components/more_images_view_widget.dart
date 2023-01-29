@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../config/constants/app_colors.dart';
-import '../../../../config/constants/constants.dart';
+import '../../../../config/constants/local_data.dart';
 
 class MoreImagesViewWidget extends StatelessWidget {
   MoreImagesViewWidget({

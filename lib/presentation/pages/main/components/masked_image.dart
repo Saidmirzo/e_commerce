@@ -31,7 +31,7 @@ class MaskedImage extends StatelessWidget {
 
   Future<ui.Image> loadImage() async {
     final completer = Completer<ui.Image>();
-    final stream = image.resolve(ImageConfiguration());
+    final stream = image.resolve(const ImageConfiguration());
     stream.addListener(ImageStreamListener(
       (info, _) => completer.complete(info.image),
     ));

@@ -3,7 +3,7 @@ import 'package:e_commerce/presentation/pages/main/components/video_player.dart'
 import 'package:e_commerce/presentation/pages/main/components/widget_categories.dart';
 import 'package:e_commerce/presentation/pages/main/components/widget_opinions.dart';
 import 'package:flutter/material.dart';
-import '../../../../config/constants/constants.dart';
+import '../../../../config/constants/local_data.dart';
 import 'bottom_about_widget.dart';
 import 'more_images_view_widget.dart';
 

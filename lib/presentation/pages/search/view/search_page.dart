@@ -1,10 +1,10 @@
 import 'package:e_commerce/config/constants/app_colors.dart';
 import 'package:e_commerce/config/constants/app_text_styles.dart';
-import 'package:e_commerce/config/constants/constants.dart';
 import 'package:e_commerce/presentation/pages/main/components/text_button_gradient.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../config/constants/local_data.dart';
 import '../components/category_item.dart';
 import '../components/search_app_bar.dart';
 

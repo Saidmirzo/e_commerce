@@ -1,6 +1,4 @@
 import 'package:e_commerce/config/constants/app_colors.dart';
-import 'package:e_commerce/config/constants/app_decorations.dart';
-import 'package:e_commerce/config/constants/app_text_styles.dart';
 import 'package:e_commerce/config/constants/assets.dart';
 import 'package:e_commerce/presentation/routes/routes.dart';
 import 'package:flutter/material.dart';

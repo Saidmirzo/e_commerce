@@ -1,12 +1,10 @@
-import 'dart:ui';
-
 import 'package:e_commerce/config/constants/app_colors.dart';
 import 'package:e_commerce/config/constants/app_text_styles.dart';
-import 'package:e_commerce/config/constants/constants.dart';
 import 'package:e_commerce/presentation/components/custom_text_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../../config/constants/local_data.dart';
 import '../../../../components/categories_button_widget.dart';
 
 class DetailsSizeAndFit extends StatefulWidget {

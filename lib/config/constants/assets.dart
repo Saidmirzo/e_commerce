@@ -78,6 +78,12 @@ class _Icons extends _AssetsHolder {
   
   String get logoApplePay => "$basePath/logo_apple_pay.svg";
   
+  String get truck => "$basePath/ic_truck.svg";
+  
+  String get train => "$basePath/ic_train.svg";
+  
+  String get airplane => "$basePath/ic_airplane.svg";
+  
 }
 
 class _Images extends _AssetsHolder {

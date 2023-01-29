@@ -3,7 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../config/constants/app_colors.dart';
 import '../../../../config/constants/app_text_styles.dart';
-import '../../../../config/constants/assets.dart';
 import '../../main/components/bottom_sheet_components/circle_button.dart';
 
 class OrderInformationWidget extends StatelessWidget {

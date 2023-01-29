@@ -37,32 +37,46 @@ class PaymentMethotItem extends StatelessWidget {
         ),
         child: Row(
           children: [
-            Container(
-              height: 21.h,
-              width: 21.h,
-              margin: EdgeInsets.only(right: 11.w),
-              padding: EdgeInsets.all(5.h),
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                border: Border.all(
-                    color: AppColors.accentColor.withOpacity(.2), width: 1),
-              ),
-              child: Visibility(
-                visible: isActive,
-                child: Container(
-                  decoration: const BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: AppColors.buttonColor,
-                  ),
-                ),
-              ),
-            ),
+            CiricleIsActiveWidget(isActive: isActive),
             SvgPicture.asset(preFixIcon),
             SizedBox(width: 10.w),
             Text(title, style: AppTextStyles.body14w6),
             const Spacer(),
             SvgPicture.asset(suffixIcon),
           ],
+        ),
+      ),
+    );
+  }
+}
+
+class CiricleIsActiveWidget extends StatelessWidget {
+  const CiricleIsActiveWidget({
+    Key? key,
+    required this.isActive,
+  }) : super(key: key);
+
+  final bool isActive;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 21.h,
+      width: 21.h,
+      margin: EdgeInsets.only(right: 11.w),
+      padding: EdgeInsets.all(5.h),
+      decoration: BoxDecoration(
+        shape: BoxShape.circle,
+        border: Border.all(
+            color: AppColors.accentColor.withOpacity(.2), width: 1),
+      ),
+      child: Visibility(
+        visible: isActive,
+        child: Container(
+          decoration: const BoxDecoration(
+            shape: BoxShape.circle,
+            color: AppColors.buttonColor,
+          ),
         ),
       ),
     );

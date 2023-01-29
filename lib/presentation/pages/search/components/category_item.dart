@@ -4,7 +4,7 @@ import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
 import '../../../../config/constants/app_colors.dart';
 import '../../../../config/constants/app_text_styles.dart';
-import '../../../../config/constants/constants.dart';
+import '../../../../config/constants/local_data.dart';
 
 class CategoryItem extends StatelessWidget {
   const CategoryItem({

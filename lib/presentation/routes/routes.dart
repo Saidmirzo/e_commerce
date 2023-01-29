@@ -1,4 +1,5 @@
 import 'package:e_commerce/presentation/pages/delivery/view/delivery_address_page.dart';
+import 'package:e_commerce/presentation/pages/delivery_method/view/delivery_method_page.dart';
 import 'package:e_commerce/presentation/pages/filter/view/filter_page.dart';
 import 'package:e_commerce/presentation/pages/filter/view/filter_products_page.dart';
 import 'package:e_commerce/presentation/pages/main/view/main_page.dart';
@@ -12,7 +13,8 @@ class Routes {
   static const filterProductsPage = '/filterProductsPage';
   static const searchPage = '/searchPage';
   static const deliveryAddressPage = '/deliveryAddressPage';
-  static const orderConfirmationPage = '/';
+  static const orderConfirmationPage = '/orderConfirmationPage';
+  static const deliveryMethodPage = '/';
   static Route<dynamic> generateRoute(RouteSettings routeSettings) {
     try {
       final Map<String, dynamic>? args =
@@ -48,6 +50,11 @@ class Routes {
           return MaterialPageRoute(
             settings: routeSettings,
             builder: (_) => const OrderConfirmationPage(),
+          );
+        case deliveryMethodPage:
+          return MaterialPageRoute(
+            settings: routeSettings,
+            builder: (_) => const DeliveryMethodPage(),
           );
         default:
           return MaterialPageRoute(

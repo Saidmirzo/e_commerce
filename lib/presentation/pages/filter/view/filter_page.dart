@@ -1,18 +1,13 @@
 import 'dart:ui';
 
-import 'package:another_xlider/another_xlider.dart';
 import 'package:e_commerce/config/constants/app_colors.dart';
 import 'package:e_commerce/config/constants/app_text_styles.dart';
 import 'package:e_commerce/config/constants/assets.dart';
-import 'package:e_commerce/config/constants/constants.dart';
-import 'package:e_commerce/presentation/components/categories_button_widget.dart';
-import 'package:e_commerce/presentation/pages/main/components/bottom_sheet_components/circle_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../components/bottom_buttons_widget.dart';
-import '../components/custom_check_box.dart';
 import '../components/filter_category_item.dart';
 import '../components/filter_color_item.dart';
 import '../components/filter_material_item.dart';

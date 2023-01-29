@@ -1,12 +1,10 @@
 import 'dart:ui';
 import 'package:e_commerce/config/constants/app_colors.dart';
-import 'package:e_commerce/main.dart';
 import 'package:e_commerce/presentation/components/custom_divider.dart';
 import 'package:e_commerce/presentation/pages/main/components/bottom_sheet_components/product_details_tab.dart';
-import 'package:e_commerce/presentation/pages/main/components/my_app_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../../../config/constants/constants.dart';
+import '../../../../../config/constants/local_data.dart';
 import '../../../../components/my_tabbar.dart';
 import 'reviews_tab.dart';
 import 'details_shipping_widget.dart';
