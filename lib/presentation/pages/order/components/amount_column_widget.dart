@@ -9,11 +9,11 @@ class AmountColumnWidget extends StatelessWidget {
     Key? key,
     required this.title,
     required this.text1,
-    required this.text2,
+    this.text2,
   }) : super(key: key);
   final String title;
   final String text1;
-  final String text2;
+  final String? text2;
 
   @override
   Widget build(BuildContext context) {

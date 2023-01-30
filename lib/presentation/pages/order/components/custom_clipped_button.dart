@@ -10,15 +10,16 @@ class CustomClippedButton extends StatelessWidget {
   const CustomClippedButton({
     Key? key,
     required this.text,
-    required this.onTap,
+    required this.onTap, required this.width,
   }) : super(key: key);
   final String text;
   final Function() onTap;
+  final double width;
 
   @override
   Widget build(BuildContext context) {
     return ClipPath(
-      clipper: MyCustomClipper(),
+      clipper: MyCustomClipper(width),
       child: Container(
         height: 38.h,
         width: 115.w,

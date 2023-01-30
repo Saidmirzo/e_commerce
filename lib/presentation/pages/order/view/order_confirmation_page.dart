@@ -8,10 +8,12 @@ import 'package:e_commerce/presentation/pages/delivery/components/row_text_widge
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import '../../../components/bottom_total_price_and_confirmation_button.dart';
 import '../components/amount_column_widget.dart';
 import '../components/custom_clipped_button.dart';
 import '../components/order_information_widget.dart';
 import '../components/payment_method_widget.dart';
+import '../components/shopping_address_widget.dart';
 import '../components/text_row_with_divider.dart';
 
 class OrderConfirmationPage extends StatelessWidget {
@@ -43,6 +45,7 @@ class OrderConfirmationPage extends StatelessWidget {
                             CustomClippedButton(
                               text: 'Information',
                               onTap: () {},
+                              width: 115.w,
                             ),
                             Text(
                               'Payment',
@@ -52,52 +55,11 @@ class OrderConfirmationPage extends StatelessWidget {
                             )
                           ],
                         ),
-                        Container(
-                          height: 144.h,
-                          margin: EdgeInsets.only(top: 20.h, bottom: 35.h),
-                          padding: EdgeInsets.symmetric(
-                              horizontal: 20.w, vertical: 24.h),
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(11.r),
-                            color: AppColors.textFieldBgColor,
-                          ),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text('Shopping Adress',
-                                  style: AppTextStyles.body13w6),
-                              Row(
-                                children: [
-                                  Text(
-                                    'Wade Warren',
-                                    style: AppTextStyles.body17w8,
-                                  ),
-                                  SizedBox(width: 14.w),
-                                  Text(
-                                    '632881083',
-                                    style: AppTextStyles.body12w6.copyWith(
-                                      color:
-                                          AppColors.accentColor.withOpacity(.3),
-                                    ),
-                                  )
-                                ],
-                              ),
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Text(
-                                    '2972 Westheimer Rd\nSanta Ana, Illinois 85486',
-                                    style: AppTextStyles.body13w6.copyWith(
-                                      color: AppColors.textColor3,
-                                    ),
-                                  ),
-                                  Text('Change', style: AppTextStyles.body13w6)
-                                ],
-                              )
-                            ],
-                          ),
+                        const ShoppingAddressWidget(
+                          name: 'Wade Warren',
+                          id: '632881083',
+                          address:
+                              '2972 Westheimer Rd\nSanta Ana, Illinois 85486',
                         ),
                         OrderInformationWidget(
                           name: 'Red Coat',
@@ -238,44 +200,12 @@ class OrderConfirmationPage extends StatelessWidget {
                       ],
                     ),
                   ),
-                  Divider(
-                    color: AppColors.dividerColor2,
-                    thickness: 1,
+                  BottomTotalPriceAndConfirmationButton(
+                    price: 200.0,
+                    buttonText: 'PLASCE ORDER',
+                    payTypeIcon: Assets.icons.logoVisa,
+                    onConfirm: () {},
                   ),
-                  Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 20.w),
-                    child: Column(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.only(top: 18.h, bottom: 25.h),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    'To Pay',
-                                    style: AppTextStyles.body13w7.copyWith(
-                                      color: AppColors.textColor3,
-                                    ),
-                                  ),
-                                  SizedBox(height: 10.h),
-                                  Text(r'$200.00',
-                                      style: AppTextStyles.body18w8),
-                                ],
-                              ),
-                              SvgPicture.asset(Assets.icons.logoVisa),
-                            ],
-                          ),
-                        ),
-                        CustomTextConfirmButton(
-                          text: 'PLASCE ORDER',
-                          onTap: () {},
-                        )
-                      ],
-                    ),
-                  )
                 ],
               ),
             )

@@ -83,6 +83,11 @@ class _Icons extends _AssetsHolder {
   String get train => "$basePath/ic_train.svg";
   
   String get airplane => "$basePath/ic_airplane.svg";
+
+  String get cvvCode => "$basePath/cvv_code.svg";
+
+  String get expairData => "$basePath/expair_date.svg";
+
   
 }
 
