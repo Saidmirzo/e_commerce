@@ -1,4 +1,5 @@
 import 'package:e_commerce/config/constants/app_text_styles.dart';
+import 'package:e_commerce/presentation/routes/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -23,7 +24,7 @@ class DeliveryAddressPage extends StatelessWidget {
           children: [
             CustomDeliveryAppBar(
               name: 'Delivery address',
-              onBack: () {},
+              onBack: () =>Navigator.pushReplacementNamed(context, Routes.mainPage),
             ),
             Expanded(
               child: ListView(
@@ -106,7 +107,7 @@ class DeliveryAddressPage extends StatelessWidget {
                         ),
                         CustomTextConfirmButton(
                           text: 'Continue',
-                          onTap: () {},
+                          onTap: () =>Navigator.pushNamed(context, Routes.orderConfirmationPage),
                         ),
                         Container(
                           alignment: Alignment.center,

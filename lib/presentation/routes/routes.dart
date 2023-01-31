@@ -11,7 +11,7 @@ import 'package:e_commerce/presentation/pages/tracking/view/order_tracking_page.
 import 'package:flutter/material.dart';
 
 class Routes {
-  static const mainPage = '/mainPage';
+  static const mainPage = '/';
   static const filterPage = '/filterPage';
   static const filterProductsPage = '/filterProductsPage';
   static const searchPage = '/searchPage';
@@ -20,7 +20,7 @@ class Routes {
   static const deliveryMethodPage = '/deliveryMethodPage';
   static const paymantPage = '/paymantPage';
   static const thanksPage = '/thanksPage';
-  static const orderTrackingPage = '/';
+  static const orderTrackingPage = '/orderTrackingPage';
   static Route<dynamic> generateRoute(RouteSettings routeSettings) {
     try {
       final Map<String, dynamic>? args =

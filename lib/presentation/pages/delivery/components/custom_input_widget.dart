@@ -60,7 +60,7 @@ class CustomInputWidget extends StatelessWidget {
                       hintStyle: AppTextStyles.body11w5.copyWith(
                         color: AppColors.accentColor.withOpacity(.2),
                       ),
-                      prefix: isPhone == true
+                      prefixIcon: isPhone == true
                           ? Wrap(
                               crossAxisAlignment: WrapCrossAlignment.center,
                               direction: Axis.horizontal,

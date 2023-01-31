@@ -2,6 +2,7 @@ import 'package:e_commerce/config/constants/app_colors.dart';
 import 'package:e_commerce/config/constants/app_decorations.dart';
 import 'package:e_commerce/config/constants/app_text_styles.dart';
 import 'package:e_commerce/config/constants/assets.dart';
+import 'package:e_commerce/presentation/routes/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -81,7 +82,7 @@ class ThanksPage extends StatelessWidget {
                   ),
                 ),
                 TextButton(
-                  onPressed: () {},
+                  onPressed: () =>Navigator.pushNamed(context, Routes.orderTrackingPage),
                   style: AppDecorations.buttonStyle(
                     padding:
                         EdgeInsets.symmetric(vertical: 7.5.h, horizontal: 10),

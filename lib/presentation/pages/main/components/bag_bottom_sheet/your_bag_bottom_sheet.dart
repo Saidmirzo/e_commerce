@@ -1,3 +1,4 @@
+import 'package:e_commerce/presentation/routes/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -50,7 +51,7 @@ class _YourBagBottomSheetState extends State<YourBagBottomSheet> {
             ),
           ),
           SizedBox(
-            height: 230.h,
+            height: 240.h,
             child: ListView.builder(
               padding: EdgeInsets.only(left: 27.w, top: 10.h),
               physics: const BouncingScrollPhysics(),
@@ -92,32 +93,36 @@ class _YourBagBottomSheetState extends State<YourBagBottomSheet> {
               ),
             ),
           ),
-          Container(
-            height: 56.h,
-            width: 170.w,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(9.r),
-              color: AppColors.buttonColor,
-              boxShadow: const [
-                BoxShadow(color: AppColors.buttonColor, blurRadius: 100)
-              ],
-            ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  'Checkout',
-                  style: AppTextStyles.body14w4.copyWith(
-                    fontFamily: AppTextStyles.fontFamilyGrafita,
-                    color: AppColors.black,
+          GestureDetector(
+            onTap: () => Navigator.pushReplacementNamed(
+                context, Routes.deliveryAddressPage),
+            child: Container(
+              height: 56.h,
+              width: 170.w,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(9.r),
+                color: AppColors.buttonColor,
+                boxShadow: const [
+                  BoxShadow(color: AppColors.buttonColor, blurRadius: 100)
+                ],
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'Checkout',
+                    style: AppTextStyles.body14w4.copyWith(
+                      fontFamily: AppTextStyles.fontFamilyGrafita,
+                      color: AppColors.black,
+                    ),
                   ),
-                ),
-                Text(
-                  '\$900',
-                  style:
-                      AppTextStyles.body12w5.copyWith(color: AppColors.black),
-                )
-              ],
+                  Text(
+                    '\$900',
+                    style:
+                        AppTextStyles.body12w5.copyWith(color: AppColors.black),
+                  )
+                ],
+              ),
             ),
           )
         ],

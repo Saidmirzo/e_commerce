@@ -47,7 +47,10 @@ class _DeliveryMethodPageState extends State<DeliveryMethodPage> {
               ),
               const RowTextWidget(text: 'Make Default', child: CustomSwitch()),
               const Spacer(),
-              CustomTextConfirmButton(text: 'SAVE', onTap: () {})
+              CustomTextConfirmButton(
+                text: 'SAVE',
+                onTap: () => Navigator.pop(context),
+              )
             ],
           ),
         ),

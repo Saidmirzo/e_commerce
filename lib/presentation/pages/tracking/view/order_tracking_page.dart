@@ -2,6 +2,7 @@ import 'package:e_commerce/config/constants/app_colors.dart';
 import 'package:e_commerce/config/constants/app_text_styles.dart';
 import 'package:e_commerce/config/constants/assets.dart';
 import 'package:e_commerce/presentation/pages/delivery/components/custom_delivery_app_bar.dart';
+import 'package:e_commerce/presentation/routes/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -24,7 +25,7 @@ class OrderTrackingPage extends StatelessWidget {
         action: Padding(
           padding: EdgeInsets.only(right: 20.w),
           child: IconButton(
-            onPressed: () {},
+            onPressed: () =>Navigator.pushReplacementNamed(context, Routes.mainPage),
             icon: SvgPicture.asset(
               Assets.icons.cancel,
             ),

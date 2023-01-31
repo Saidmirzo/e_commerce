@@ -4,6 +4,7 @@ import 'package:e_commerce/config/constants/assets.dart';
 import 'package:e_commerce/presentation/components/custom_switch.dart';
 import 'package:e_commerce/presentation/pages/delivery/components/custom_delivery_app_bar.dart';
 import 'package:e_commerce/presentation/pages/delivery/components/row_text_widget.dart';
+import 'package:e_commerce/presentation/routes/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -54,11 +55,12 @@ class OrderConfirmationPage extends StatelessWidget {
                             )
                           ],
                         ),
-                        const ShoppingAddressWidget(
+                         ShoppingAddressWidget(
                           name: 'Wade Warren',
                           id: '632881083',
                           address:
                               '2972 Westheimer Rd\nSanta Ana, Illinois 85486',
+                              onTap:()=> Navigator.pop(context),
                         ),
                         OrderInformationWidget(
                           name: 'Red Coat',
@@ -69,45 +71,48 @@ class OrderConfirmationPage extends StatelessWidget {
                           size: 'XS',
                         ),
                         Text('Delivery method', style: AppTextStyles.body18w7),
-                        Container(
-                          height: 112.h,
-                          padding: EdgeInsets.symmetric(
-                              horizontal: 20.w, vertical: 24.h),
-                          decoration: BoxDecoration(
-                            color: AppColors.textFieldBgColor,
-                            borderRadius: BorderRadius.circular(11.r),
-                          ),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Row(
-                                children: [
-                                  Text(
-                                    'Free Delivery',
-                                    style: AppTextStyles.body17w8,
-                                  ),
-                                  SizedBox(width: 11.w),
-                                  Text(
-                                    r'+ $0,00',
-                                    style: AppTextStyles.body14w6.copyWith(
-                                      color: AppColors.buttonColor,
+                        GestureDetector(
+                          onTap: () => Navigator.pushNamed(context, Routes.deliveryMethodPage),
+                          child: Container(
+                            height: 112.h,
+                            padding: EdgeInsets.symmetric(
+                                horizontal: 20.w, vertical: 24.h,),
+                            decoration: BoxDecoration(
+                              color: AppColors.textFieldBgColor,
+                              borderRadius: BorderRadius.circular(11.r),
+                            ),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                  Row(
+                                  children: [
+                                    Text(
+                                      'Free Delivery',
+                                      style: AppTextStyles.body17w8,
                                     ),
-                                  )
-                                ],
-                              ),
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Text(
-                                    'Will be delivered to the specified\naddress within 3-6 working days',
-                                    style: AppTextStyles.body12w6
-                                        .copyWith(color: AppColors.textColor3),
-                                  ),
-                                  Text('Change', style: AppTextStyles.body13w6)
-                                ],
-                              )
-                            ],
+                                    SizedBox(width: 11.w),
+                                    Text(
+                                      r'+ $0,00',
+                                      style: AppTextStyles.body14w6.copyWith(
+                                        color: AppColors.buttonColor,
+                                      ),
+                                    )
+                                  ],
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(
+                                      'Will be delivered to the specified\naddress within 3-6 working days',
+                                      style: AppTextStyles.body12w6
+                                          .copyWith(color: AppColors.textColor3),
+                                    ),
+                                    Text('Change', style: AppTextStyles.body13w6)
+                                  ],
+                                )
+                              ],
+                            ),
                           ),
                         ),
                         RowTextWidget(
@@ -203,7 +208,7 @@ class OrderConfirmationPage extends StatelessWidget {
                     price: 200.0,
                     buttonText: 'PLASCE ORDER',
                     payTypeIcon: Assets.icons.logoVisa,
-                    onConfirm: () {},
+                    onConfirm: () =>Navigator.pushNamed(context, Routes.paymantPage),
                   ),
                 ],
               ),
