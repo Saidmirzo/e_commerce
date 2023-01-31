@@ -1,3 +1,4 @@
+import 'package:e_commerce/presentation/components/custom_text_confirm_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -9,7 +10,8 @@ class ShoppingAddressWidget extends StatelessWidget {
     super.key,
     required this.name,
     required this.id,
-    required this.address, this.margin,
+    required this.address,
+    this.margin,
   });
   final String name;
   final String id;
@@ -20,7 +22,7 @@ class ShoppingAddressWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 144.h,
-      margin:margin?? EdgeInsets.only(top: 20.h, bottom: 35.h),
+      margin: margin ?? EdgeInsets.only(top: 20.h, bottom: 35.h),
       padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 24.h),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(11.r),
@@ -57,7 +59,8 @@ class ShoppingAddressWidget extends StatelessWidget {
               ),
               Text('Change', style: AppTextStyles.body13w6)
             ],
-          )
+          ),
+          
         ],
       ),
     );

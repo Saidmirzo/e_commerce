@@ -2,7 +2,6 @@ import 'package:e_commerce/config/constants/app_colors.dart';
 import 'package:e_commerce/config/constants/app_text_styles.dart';
 import 'package:e_commerce/config/constants/assets.dart';
 import 'package:e_commerce/presentation/components/custom_switch.dart';
-import 'package:e_commerce/presentation/components/custom_text_confirm_button.dart';
 import 'package:e_commerce/presentation/pages/delivery/components/custom_delivery_app_bar.dart';
 import 'package:e_commerce/presentation/pages/delivery/components/row_text_widget.dart';
 import 'package:flutter/material.dart';

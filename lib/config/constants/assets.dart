@@ -88,6 +88,20 @@ class _Icons extends _AssetsHolder {
 
   String get expairData => "$basePath/expair_date.svg";
 
+  String get iconThanks => "$basePath/icon_thanks.svg";
+
+  String get calendar => "$basePath/ic_calendar.svg";
+
+  String get checkout => "$basePath/ic_checkout.svg";
+
+  String get orderPayment => "$basePath/ic_order_payment.svg";
+
+  String get sendingOrder => "$basePath/ic_sending_order.svg";
+  
+  String get receivingOrder => "$basePath/ic_receving_order.svg";
+
+
+
   
 }
 

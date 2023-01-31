@@ -6,6 +6,8 @@ import 'package:e_commerce/presentation/pages/main/view/main_page.dart';
 import 'package:e_commerce/presentation/pages/order/view/order_confirmation_page.dart';
 import 'package:e_commerce/presentation/pages/payment/view/payment_page.dart';
 import 'package:e_commerce/presentation/pages/search/view/search_page.dart';
+import 'package:e_commerce/presentation/pages/thanks/view/thanks_page.dart';
+import 'package:e_commerce/presentation/pages/tracking/view/order_tracking_page.dart';
 import 'package:flutter/material.dart';
 
 class Routes {
@@ -16,7 +18,9 @@ class Routes {
   static const deliveryAddressPage = '/deliveryAddressPage';
   static const orderConfirmationPage = '/orderConfirmationPage';
   static const deliveryMethodPage = '/deliveryMethodPage';
-  static const paymantPage = '/';
+  static const paymantPage = '/paymantPage';
+  static const thanksPage = '/thanksPage';
+  static const orderTrackingPage = '/';
   static Route<dynamic> generateRoute(RouteSettings routeSettings) {
     try {
       final Map<String, dynamic>? args =
@@ -58,10 +62,20 @@ class Routes {
             settings: routeSettings,
             builder: (_) => const DeliveryMethodPage(),
           );
-          case paymantPage:
+        case paymantPage:
           return MaterialPageRoute(
             settings: routeSettings,
             builder: (_) => const PaymentPage(),
+          );
+        case thanksPage:
+          return MaterialPageRoute(
+            settings: routeSettings,
+            builder: (_) => const ThanksPage(),
+          );
+        case orderTrackingPage:
+          return MaterialPageRoute(
+            settings: routeSettings,
+            builder: (_) => const OrderTrackingPage(),
           );
         default:
           return MaterialPageRoute(

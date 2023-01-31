@@ -12,31 +12,38 @@ class CustomDeliveryAppBar extends StatelessWidget
     Key? key,
     required this.name,
     required this.onBack,
+    this.action,
   }) : super(key: key);
   final String name;
   final Function onBack;
+  final Widget? action;
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
       backgroundColor: AppColors.black,
       leadingWidth: 64.w,
-      leading: GestureDetector(
-        onTap: () => onBack(),
-        child: Container(
-          // height: 48.h,
-          // width: 48.h,
-          margin: EdgeInsets.only(left: 20.w),
-          padding: EdgeInsets.all(10.h),
-          decoration: BoxDecoration(
-            border: Border.all(
-                color: AppColors.accentColor.withOpacity(.1), width: 1),
-            shape: BoxShape.circle,
-            color: AppColors.searchColor,
-          ),
-          child: SvgPicture.asset(Assets.icons.arrowLeft),
-        ),
-      ),
+      leading: action == null
+          ? GestureDetector(
+              onTap: () => onBack(),
+              child: Container(
+                // height: 48.h,
+                // width: 48.h,
+                margin: EdgeInsets.only(left: 20.w),
+                padding: EdgeInsets.all(10.h),
+                decoration: BoxDecoration(
+                  border: Border.all(
+                      color: AppColors.accentColor.withOpacity(.1), width: 1),
+                  shape: BoxShape.circle,
+                  color: AppColors.searchColor,
+                ),
+                child: SvgPicture.asset(Assets.icons.arrowLeft),
+              ),
+            )
+          : null,
+      actions
+      : [action ?? const SizedBox.shrink()],
+      
       centerTitle: true,
       title: Text(name, style: AppTextStyles.body17w6),
     );
