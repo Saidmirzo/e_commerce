@@ -43,7 +43,7 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
             left: 0,
             right: 0,
             child: Container(
-              height: 48.h,
+              height: 40.h,
               color: AppColors.black,
             ),
           ),
@@ -67,9 +67,7 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
                   },
                   icon: SvgPicture.asset(
                     Assets.icons.search,
-                    color: activeIndex == 1
-                        ? AppColors.accentColor
-                        : null,
+                    color: activeIndex == 1 ? AppColors.accentColor : null,
                   ),
                 ),
                 IconButton(
