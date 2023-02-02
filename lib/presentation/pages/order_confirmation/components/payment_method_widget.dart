@@ -1,4 +1,4 @@
-import 'package:e_commerce/presentation/pages/order/components/payment_methot_item.dart';
+import 'package:e_commerce/presentation/pages/order_confirmation/components/payment_methot_item.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

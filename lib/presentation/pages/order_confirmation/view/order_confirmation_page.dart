@@ -39,6 +39,7 @@ class OrderConfirmationPage extends StatelessWidget {
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 20.w),
                     child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Row(
                           children: [
@@ -55,12 +56,12 @@ class OrderConfirmationPage extends StatelessWidget {
                             )
                           ],
                         ),
-                         ShoppingAddressWidget(
+                        ShoppingAddressWidget(
                           name: 'Wade Warren',
                           id: '632881083',
                           address:
                               '2972 Westheimer Rd\nSanta Ana, Illinois 85486',
-                              onTap:()=> Navigator.pop(context),
+                          onTap: () => Navigator.pop(context),
                         ),
                         OrderInformationWidget(
                           name: 'Red Coat',
@@ -70,13 +71,20 @@ class OrderConfirmationPage extends StatelessWidget {
                           count: 1,
                           size: 'XS',
                         ),
-                        Text('Delivery method', style: AppTextStyles.body18w7),
+                        Padding(
+                          padding: EdgeInsets.only(top: 35.h, bottom: 20.h),
+                          child: Text('Delivery method',
+                              style: AppTextStyles.body18w7),
+                        ),
                         GestureDetector(
-                          onTap: () => Navigator.pushNamed(context, Routes.deliveryMethodPage),
+                          onTap: () => Navigator.pushNamed(
+                              context, Routes.deliveryMethodPage),
                           child: Container(
                             height: 112.h,
                             padding: EdgeInsets.symmetric(
-                                horizontal: 20.w, vertical: 24.h,),
+                              horizontal: 20.w,
+                              vertical: 24.h,
+                            ),
                             decoration: BoxDecoration(
                               color: AppColors.textFieldBgColor,
                               borderRadius: BorderRadius.circular(11.r),
@@ -84,7 +92,7 @@ class OrderConfirmationPage extends StatelessWidget {
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                  Row(
+                                Row(
                                   children: [
                                     Text(
                                       'Free Delivery',
@@ -105,10 +113,11 @@ class OrderConfirmationPage extends StatelessWidget {
                                   children: [
                                     Text(
                                       'Will be delivered to the specified\naddress within 3-6 working days',
-                                      style: AppTextStyles.body12w6
-                                          .copyWith(color: AppColors.textColor3),
+                                      style: AppTextStyles.body12w6.copyWith(
+                                          color: AppColors.textColor3),
                                     ),
-                                    Text('Change', style: AppTextStyles.body13w6)
+                                    Text('Change',
+                                        style: AppTextStyles.body13w6)
                                   ],
                                 )
                               ],
@@ -208,7 +217,8 @@ class OrderConfirmationPage extends StatelessWidget {
                     price: 200.0,
                     buttonText: 'PLASCE ORDER',
                     payTypeIcon: Assets.icons.logoVisa,
-                    onConfirm: () =>Navigator.pushNamed(context, Routes.paymantPage),
+                    onConfirm: () =>
+                        Navigator.pushNamed(context, Routes.paymantPage),
                   ),
                 ],
               ),

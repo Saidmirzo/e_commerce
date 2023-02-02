@@ -141,6 +141,8 @@ class _Images extends _AssetsHolder {
   String get striped => "$basePath/img_striped.png";
 
   String get shirt => "$basePath/img_shirt.png";
+
+  String get winterJacket => "$basePath/winter_jacket.png";
 }
 
 class _Videos extends _AssetsHolder {

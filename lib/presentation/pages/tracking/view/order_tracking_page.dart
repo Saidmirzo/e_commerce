@@ -8,7 +8,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../../components/custom_text_confirm_button.dart';
-import '../../order/components/shopping_address_widget.dart';
+import '../../order_confirmation/components/shopping_address_widget.dart';
 import '../components/estimated_time_item.dart';
 import '../components/order_date_widget.dart';
 

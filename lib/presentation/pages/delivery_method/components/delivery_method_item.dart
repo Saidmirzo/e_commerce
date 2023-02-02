@@ -4,7 +4,7 @@ import 'package:flutter_svg/svg.dart';
 
 import '../../../../config/constants/app_colors.dart';
 import '../../../../config/constants/app_text_styles.dart';
-import '../../order/components/payment_methot_item.dart';
+import '../../order_confirmation/components/payment_methot_item.dart';
 
 class DeliveryMethodItem extends StatelessWidget {
   const DeliveryMethodItem({

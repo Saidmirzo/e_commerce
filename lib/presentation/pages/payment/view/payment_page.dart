@@ -3,15 +3,15 @@ import 'package:e_commerce/presentation/components/bottom_total_price_and_confir
 import 'package:e_commerce/presentation/components/custom_switch.dart';
 import 'package:e_commerce/presentation/pages/delivery/components/custom_delivery_app_bar.dart';
 import 'package:e_commerce/presentation/pages/delivery/components/row_text_widget.dart';
-import 'package:e_commerce/presentation/pages/order/components/amount_column_widget.dart';
+import 'package:e_commerce/presentation/pages/order_confirmation/components/amount_column_widget.dart';
 import 'package:e_commerce/presentation/routes/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../config/constants/app_colors.dart';
 import '../../../../config/constants/app_text_styles.dart';
-import '../../order/components/custom_clipped_button.dart';
-import '../../order/components/shopping_address_widget.dart';
+import '../../order_confirmation/components/custom_clipped_button.dart';
+import '../../order_confirmation/components/shopping_address_widget.dart';
 import '../components/payment_input_widget.dart';
 
 class PaymentPage extends StatelessWidget {
